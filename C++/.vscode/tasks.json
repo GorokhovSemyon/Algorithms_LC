@@ -12,7 +12,8 @@
                 // "longestCommonPrefix.cpp",
                 // "isPalindrome.cpp",
                 // "twoSum.cpp",
-                "validParentheses.cpp",
+                // "validParentheses.cpp",
+                "candy.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

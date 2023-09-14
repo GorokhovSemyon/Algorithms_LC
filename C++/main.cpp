@@ -4,7 +4,8 @@
 // #include "isPalindrome.h"
 // #include "Roman_to_integer.h"
 // #include "longestCommonPrefix.h"
-#include "validParentheses.h"
+// #include "validParentheses.h"
+#include "candy.h"
 
 int main() {
     // For Two_Sum
@@ -42,12 +43,27 @@ int main() {
 
     // For validParentheses
 
-    SolutionVP res;
-    string input;
-    cin >> input;
-    if(res.isValid(input)){
-        cout << "Yes\n";
-    } else {
-        cout << "No\n";
+    // SolutionVP res;
+    // string input;
+    // cin >> input;
+    // if(res.isValid(input)){
+    //     cout << "Yes\n";
+    // } else {
+    //     cout << "No\n";
+    // }
+
+    // For candy
+
+    SolutionCND res;
+    int n;
+    std::cout << "Введите длину вектора: ";
+    std::cin >> n;
+    int* elements = new int[n];
+    std::cout << "Введите элементы вектора через пробел: ";
+    for (int i = 0; i < n; ++i) {
+        std::cin >> elements[i];
     }
+    std::vector<int> inp(elements, elements + n);
+    delete[] elements;
+    cout << res.candy(inp) << std::endl;
 }
