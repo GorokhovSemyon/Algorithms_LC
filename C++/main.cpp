@@ -5,7 +5,8 @@
 // #include "Roman_to_integer.h"
 // #include "longestCommonPrefix.h"
 // #include "validParentheses.h"
-#include "candy.h"
+// #include "candy.h"
+#include "reconstructItinerary.h"
 
 int main() {
     // For Two_Sum
@@ -54,16 +55,25 @@ int main() {
 
     // For candy
 
-    SolutionCND res;
-    int n;
-    std::cout << "Введите длину вектора: ";
-    std::cin >> n;
-    int* elements = new int[n];
-    std::cout << "Введите элементы вектора через пробел: ";
-    for (int i = 0; i < n; ++i) {
-        std::cin >> elements[i];
+    // SolutionCND res;
+    // int n;
+    // std::cout << "Введите длину вектора: ";
+    // std::cin >> n;
+    // int* elements = new int[n];
+    // std::cout << "Введите элементы вектора через пробел: ";
+    // for (int i = 0; i < n; ++i) {
+    //     std::cin >> elements[i];
+    // }
+    // std::vector<int> inp(elements, elements + n);
+    // delete[] elements;
+    // cout << res.candy(inp) << std::endl;
+
+    // For Reconstruct Itinerary
+
+    SolutionRI tmp;
+    vector<vector<string>> tickets = {{"MUC","LHR"},{"JFK","MUC"},{"SFO","SJC"},{"LHR","SFO"}};
+    for (int i = 0; i < tickets.size(); i++) {
+        vector<string> result = tmp.findItinerary(tickets);
+        std::cout << result[i] << std::endl;
     }
-    std::vector<int> inp(elements, elements + n);
-    delete[] elements;
-    cout << res.candy(inp) << std::endl;
 }

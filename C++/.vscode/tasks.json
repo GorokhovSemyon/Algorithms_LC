@@ -13,7 +13,8 @@
                 // "isPalindrome.cpp",
                 // "twoSum.cpp",
                 // "validParentheses.cpp",
-                "candy.cpp",
+                // "candy.cpp",
+                "reconstructItinerary.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
