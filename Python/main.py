@@ -259,6 +259,7 @@ class ListNode:
     def __repr__(self):
         return "ListNode(val=" + str(self.val) + ", next={" + str(self.next) + "})"
 
+
 def list_to_LL(arr):
     if len(arr) < 1:
         return None
@@ -306,6 +307,20 @@ def checkInclusion(s1, s2):
     return False
 
 
+def mergeKLists(lists) -> ListNode:
+    v = []
+    for i in lists:
+        x = i
+        while x:
+            v += [x.val]
+            x = x.next
+    v = sorted(v, reverse=True)
+    ans = None
+    for i in v:
+        ans = ListNode(i, ans)
+    return ans
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
@@ -313,5 +328,8 @@ if __name__ == '__main__':
 
     # Для reverse_linked_list()
     tmp = list_to_LL([1, 2, 3, 4, 5])
-    print(tmp)
-    print(reverse_linked_list(tmp))
+    tmp2 = list_to_LL([1, 3, 4, 7])
+    tmp3 = list_to_LL([2, 4, 6])
+
+    tmp_all = [tmp, tmp2, tmp3]
+    print(mergeKLists(tmp_all))
