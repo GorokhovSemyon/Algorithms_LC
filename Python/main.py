@@ -308,6 +308,7 @@ def checkInclusion(s1, s2):
 
 
 def mergeKLists(lists) -> ListNode:
+    """Слияние k сортированных массивов"""
     v = []
     for i in lists:
         x = i
@@ -319,6 +320,40 @@ def mergeKLists(lists) -> ListNode:
     for i in v:
         ans = ListNode(i, ans)
     return ans
+
+
+import math
+
+
+def min_usb_cost(n, m, c2, c5):
+    """Задача с Яндекс контеста
+       n - количество слотов
+       m - количество нужных слотов
+       c2 - цела за двойник
+       c5 - цена за пятерник"""
+    if m <= n:
+        return 0
+    total_cost = 0
+    total_cost1 = 0
+    total_cost2 = 0
+    hubs_needed = 0
+    splitters_needed = 0
+    if c2 * 4 >= c5:
+        hubs_needed = (m - n) // 4
+    else:
+        splitters_needed = m - n
+    tmp = hubs_needed*5 + splitters_needed*2 + (n - hubs_needed - splitters_needed)
+    if m > tmp:
+        total_cost1 += math.ceil((m-tmp)) * c2
+        total_cost2 += math.ceil((m-tmp)/4) * c5
+        if total_cost1 >= total_cost2:
+            total_cost += total_cost2
+        else:
+            total_cost += total_cost1
+    total_cost += splitters_needed * c2 + hubs_needed * c5
+
+    return total_cost
+
 
 
 if __name__ == '__main__':
@@ -333,3 +368,12 @@ if __name__ == '__main__':
 
     tmp_all = [tmp, tmp2, tmp3]
     print(mergeKLists(tmp_all))
+
+    # From Yandex.contest
+    # n = int(input())  # Number of USB ports
+    # m = int(input())  # Number of gadgets
+    # c2 = int(input())  # Cost of a splitter
+    # c5 = int(input())  # Cost of a hub
+    #
+    # result = min_usb_cost(n, m, c2, c5)
+    # print(result)
