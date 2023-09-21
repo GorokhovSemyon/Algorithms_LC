@@ -308,7 +308,7 @@ def checkInclusion(s1, s2):
 
 
 def mergeKLists(lists) -> ListNode:
-    """Слияние k сортированных массивов"""
+    """Слияние k сортированных массивов, которые находятся в связном списке"""
     v = []
     for i in lists:
         x = i
@@ -322,15 +322,14 @@ def mergeKLists(lists) -> ListNode:
     return ans
 
 
-import math
-
-
 def min_usb_cost(n, m, c2, c5):
     """Задача с Яндекс контеста
        n - количество слотов
        m - количество нужных слотов
        c2 - цела за двойник
        c5 - цена за пятерник"""
+    import math
+
     if m <= n:
         return 0
     total_cost = 0
