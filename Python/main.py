@@ -364,12 +364,26 @@ def isSubsequence(self, s: str, t: str) -> bool:
     return i == len(s)
 
 
-def longestStrChain(self, words):
+def longestStrChain(words):
+    """Поиск самой длинной цепочки (LC1048)"""
     dp = {}
     for w in sorted(words, key=len):
         dp[w] = max(dp.get(w[:i] + w[i + 1:], 0) + 1 for i in range(len(w)))
     return max(dp.values())
 
+def champagneTower(poured: int, query_row: int, query_glass: int) -> float:
+    """Задача про пирамиду из бокалов (LC799)"""
+    tower = [[0] * (i + 1) for i in range(query_row + 1)]
+    tower[0][0] = poured
+
+    for row in range(query_row):
+        for glass in range(len(tower[row])):
+            excess = (tower[row][glass] - 1) / 2.0
+            if excess > 0:
+                tower[row + 1][glass] += excess
+                tower[row + 1][glass + 1] += excess
+
+    return min(1.0, tower[query_row][query_glass])
 
 
 if __name__ == '__main__':
