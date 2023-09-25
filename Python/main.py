@@ -386,6 +386,15 @@ def champagneTower(poured: int, query_row: int, query_glass: int) -> float:
     return min(1.0, tower[query_row][query_glass])
 
 
+def findTheDifference(s: str, t: str) -> str:
+    """Find the difference (LC389) XOR!!!"""
+    result = 0
+    for char in s + t:
+        result ^= ord(char)
+    return chr(result)
+
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
