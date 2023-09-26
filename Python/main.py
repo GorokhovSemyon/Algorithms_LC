@@ -341,10 +341,10 @@ def min_usb_cost(n, m, c2, c5):
         hubs_needed = (m - n) // 4
     else:
         splitters_needed = m - n
-    tmp = hubs_needed*5 + splitters_needed*2 + (n - hubs_needed - splitters_needed)
+    tmp = hubs_needed * 5 + splitters_needed * 2 + (n - hubs_needed - splitters_needed)
     if m > tmp:
-        total_cost1 += math.ceil((m-tmp)) * c2
-        total_cost2 += math.ceil((m-tmp)/4) * c5
+        total_cost1 += math.ceil((m - tmp)) * c2
+        total_cost2 += math.ceil((m - tmp) / 4) * c5
         if total_cost1 >= total_cost2:
             total_cost += total_cost2
         else:
@@ -371,6 +371,7 @@ def longestStrChain(words):
         dp[w] = max(dp.get(w[:i] + w[i + 1:], 0) + 1 for i in range(len(w)))
     return max(dp.values())
 
+
 def champagneTower(poured: int, query_row: int, query_glass: int) -> float:
     """Задача про пирамиду из бокалов (LC799)"""
     tower = [[0] * (i + 1) for i in range(query_row + 1)]
@@ -394,6 +395,31 @@ def findTheDifference(s: str, t: str) -> str:
     return chr(result)
 
 
+def removeDuplicates(nums) -> int:
+    """Удаление дубликатов, работа внутри исходного отсортированного массива"""
+    j = 1
+    for i in range(1, len(nums)):
+        if nums[i] != nums[i - 1]:
+            nums[j] = nums[i]
+            j += 1
+    return j
+
+def removeDuplicateLetters(s) -> str:
+    """Удаление повторяющихся символов и сортировка по последнему появлению"""
+    stack = []
+    seen = set()
+    last_occ = {c: i for i, c in enumerate(s)}
+
+    for i, c in enumerate(s):
+        if c not in seen:
+
+            while stack and c < stack[-1] and i < last_occ[stack[-1]]:
+                seen.discard(stack.pop())
+            seen.add(c)
+            stack.append(c)
+
+    return ''.join(stack)
+
 
 if __name__ == '__main__':
     # Для group_anagram()
@@ -401,12 +427,12 @@ if __name__ == '__main__':
     # print(group_anagrams(input_strs))
 
     # Для reverse_linked_list()
-    tmp = list_to_LL([1, 2, 3, 4, 5])
-    tmp2 = list_to_LL([1, 3, 4, 7])
-    tmp3 = list_to_LL([2, 4, 6])
-
-    tmp_all = [tmp, tmp2, tmp3]
-    print(mergeKLists(tmp_all))
+    # tmp = list_to_LL([1, 2, 3, 4, 5])
+    # tmp2 = list_to_LL([1, 3, 4, 7])
+    # tmp3 = list_to_LL([2, 4, 6])
+    #
+    # tmp_all = [tmp, tmp2, tmp3]
+    # print(mergeKLists(tmp_all))
 
     # From Yandex.contest
     # n = int(input())  # Number of USB ports
@@ -416,3 +442,9 @@ if __name__ == '__main__':
     #
     # result = min_usb_cost(n, m, c2, c5)
     # print(result)
+
+    # For remove_duplicates()
+    nums = [1, 1, 2, 3, 3, 3, 5, 5, 5]  # Input
+    expectedNums = [1, 2]  # answer
+
+    print(removeDuplicates(nums))  # test
