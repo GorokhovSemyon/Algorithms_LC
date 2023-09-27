@@ -421,6 +421,33 @@ def removeDuplicateLetters(s) -> str:
     return ''.join(stack)
 
 
+def decodeAtIndex(s: str, k: int) -> str:
+    """Задача поиска символа в предварительно расшифрованной строке"""
+    length = 0
+    i = 0
+
+    # в этом цикле вычисляется длина расшифрованной строки в которой будет ответ
+    while length < k:
+        if s[i].isdigit():
+            length *= int(s[i])
+        else:
+            length += 1
+        i += 1
+
+    # в этом цикле осуществляется обратный проход, чтобы не создавать отдельную
+    # переменную под расшифрованную строку (т.к. это большие затраты памяти)
+    for j in range(i - 1, -1, -1):
+        char = s[j]
+        if char.isdigit():
+            length //= int(char)
+            k %= length
+        elif k == 0 or k == length:
+            return char
+        else:
+            length -= 1
+
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
