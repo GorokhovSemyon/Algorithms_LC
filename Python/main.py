@@ -446,6 +446,10 @@ def decodeAtIndex(s: str, k: int) -> str:
         else:
             length -= 1
 
+def sortArrayByParity(nums) -> list:
+    """Сортировка по признаку чётности"""
+    return [x for x in nums if x % 2 == 0] + [x for x in nums if x % 2 == 1]
+
 
 
 if __name__ == '__main__':
