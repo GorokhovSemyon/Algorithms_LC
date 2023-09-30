@@ -472,6 +472,18 @@ def isMonotonic(nums) -> bool:
 
     return True
 
+def find132pattern(nums) -> bool:
+    """Решение задачи с паттерном 132"""
+    stack, last = [], float('-inf')
+
+    for num in reversed(nums):
+        if num < last:
+            return True
+        while stack and stack[-1] < num:
+            last = stack.pop()
+        stack.append(num)
+    return False
+
 
 if __name__ == '__main__':
     # Для group_anagram()
