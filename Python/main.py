@@ -485,6 +485,11 @@ def find132pattern(nums) -> bool:
     return False
 
 
+def reverseWords(s: str) -> str:
+    """Разворот всех слов в строке"""
+    return ' '.join(map(lambda word: word[::-1], s.split()))
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
