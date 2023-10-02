@@ -490,6 +490,43 @@ def reverseWords(s: str) -> str:
     return ' '.join(map(lambda word: word[::-1], s.split()))
 
 
+def winnerOfGame(colors: str) -> bool:
+    """Выявление победителя в игре"""
+    from collections import Counter
+    from itertools import groupby
+
+    c = Counter()  # пустой счётчик
+    for x, t in groupby(colors):  # обновление счётчика
+        c[x] += max(len(list(t)) - 2, 0)  # A/B : max извлечений
+
+    if c['A'] > c['B']:
+        return True
+    return False
+
+
+def winnerOfGameImproved(colors: str) -> bool:
+    """Улучшенная версия без использования доп памяти"""
+    alice_plays, bob_plays = 0, 0
+    count = 1
+
+    for i in range(1, len(colors)):
+        if colors[i] == colors[i - 1]:
+            count += 1
+        else:
+            if colors[i - 1] == 'A':
+                alice_plays += max(0, count - 2)
+            else:
+                bob_plays += max(0, count - 2)
+            count = 1
+
+    if colors[-1] == 'A':
+        alice_plays += max(0, count - 2)
+    else:
+        bob_plays += max(0, count - 2)
+
+    return alice_plays > bob_plays
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
