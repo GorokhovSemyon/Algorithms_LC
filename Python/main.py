@@ -527,6 +527,21 @@ def winnerOfGameImproved(colors: str) -> bool:
     return alice_plays > bob_plays
 
 
+def numIdenticalPairs(nums) -> int:
+    """Найти все хорошие пары (nums[i] == nums[j] and i < j)"""
+    res_dict = {}
+    cnt = 0
+
+    for elem in nums:
+        if elem not in res_dict:
+            res_dict[elem] = 1
+        else:
+            res_dict[elem] += 1
+            cnt += res_dict[elem] - 1
+
+    return cnt
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
