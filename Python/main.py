@@ -566,6 +566,4 @@ if __name__ == '__main__':
 
     # For remove_duplicates()
     nums = [1, 1, 2, 3, 3, 3, 5, 5, 5]  # Input
-    expectedNums = [1, 2]  # answer
-
     print(removeDuplicates(nums))  # test
