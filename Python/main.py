@@ -541,6 +541,22 @@ def numIdenticalPairs(nums) -> int:
 
     return cnt
 
+def majorityElement(nums):
+    """Вывести числа, которые встречаются более n/3 раз в массиве"""
+    from collections import Counter
+    num_counts = Counter(nums)
+
+    # Создаем пустой список для хранения результатов
+    result = []
+
+    # Проходимся по парам (число, количество) в словаре num_counts
+    for num, count in num_counts.items():
+        # Проверяем условие
+        if count > len(nums) // 3:
+            result.append(num)
+
+    return result
+
 
 if __name__ == '__main__':
     # Для group_anagram()
