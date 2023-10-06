@@ -598,4 +598,4 @@ if __name__ == '__main__':
 
     # For remove_duplicates()
     nums = [1, 1, 2, 3, 3, 3, 5, 5, 5]  # Input
-    print(removeDuplicates(nums))  # test
+    print(remove_duplicates(nums))  # test
