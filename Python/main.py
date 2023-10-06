@@ -193,7 +193,7 @@ class RandomizedSet:
         self.data_map.pop(val)
         return True
 
-    def getRandom(self) -> int:
+    def get_random(self) -> int:
         # Получение случайного элемента из списка
         import random
         return random.choice(self.data)
@@ -281,7 +281,7 @@ def reverse_linked_list(head: ListNode):
     return new_list
 
 
-def checkInclusion(s1, s2):
+def check_inclusion(s1, s2):
     """Проверка есть ли в каком-то виде перестановка строки s2 в s1"""
     from collections import Counter
     cntr, w, match = Counter(s1), len(s1), 0
@@ -307,7 +307,7 @@ def checkInclusion(s1, s2):
     return False
 
 
-def mergeKLists(lists) -> ListNode:
+def merge_k_lists(lists) -> ListNode:
     """Слияние k сортированных массивов, которые находятся в связном списке"""
     v = []
     for i in lists:
@@ -354,7 +354,7 @@ def min_usb_cost(n, m, c2, c5):
     return total_cost
 
 
-def isSubsequence(self, s: str, t: str) -> bool:
+def is_subsequence(self, s: str, t: str) -> bool:
     """Есть ли набор символов из t в s"""
     i, j = 0, 0
     while i < len(s) and j < len(t):
@@ -364,7 +364,7 @@ def isSubsequence(self, s: str, t: str) -> bool:
     return i == len(s)
 
 
-def longestStrChain(words):
+def longest_str_chain(words):
     """Поиск самой длинной цепочки (LC1048)"""
     dp = {}
     for w in sorted(words, key=len):
@@ -372,7 +372,7 @@ def longestStrChain(words):
     return max(dp.values())
 
 
-def champagneTower(poured: int, query_row: int, query_glass: int) -> float:
+def champagne_tower(poured: int, query_row: int, query_glass: int) -> float:
     """Задача про пирамиду из бокалов (LC799)"""
     tower = [[0] * (i + 1) for i in range(query_row + 1)]
     tower[0][0] = poured
@@ -387,7 +387,7 @@ def champagneTower(poured: int, query_row: int, query_glass: int) -> float:
     return min(1.0, tower[query_row][query_glass])
 
 
-def findTheDifference(s: str, t: str) -> str:
+def find_the_difference(s: str, t: str) -> str:
     """Find the difference (LC389) XOR!!!"""
     result = 0
     for char in s + t:
@@ -395,7 +395,7 @@ def findTheDifference(s: str, t: str) -> str:
     return chr(result)
 
 
-def removeDuplicates(nums) -> int:
+def remove_duplicates(nums) -> int:
     """Удаление дубликатов, работа внутри исходного отсортированного массива"""
     j = 1
     for i in range(1, len(nums)):
@@ -404,7 +404,7 @@ def removeDuplicates(nums) -> int:
             j += 1
     return j
 
-def removeDuplicateLetters(s) -> str:
+def remove_duplicate_letters(s) -> str:
     """Удаление повторяющихся символов и сортировка по последнему появлению"""
     stack = []
     seen = set()
@@ -421,7 +421,7 @@ def removeDuplicateLetters(s) -> str:
     return ''.join(stack)
 
 
-def decodeAtIndex(s: str, k: int) -> str:
+def decode_at_index(s: str, k: int) -> str:
     """Задача поиска символа в предварительно расшифрованной строке"""
     length = 0
     i = 0
@@ -446,12 +446,12 @@ def decodeAtIndex(s: str, k: int) -> str:
         else:
             length -= 1
 
-def sortArrayByParity(nums) -> list:
+def sort_array_by_parity(nums) -> list:
     """Сортировка по признаку чётности"""
     return [x for x in nums if x % 2 == 0] + [x for x in nums if x % 2 == 1]
 
 
-def isMonotonic(nums) -> bool:
+def is_monotonic(nums) -> bool:
     """Проверка монотонности последовательности"""
     if len(nums) < 2:
         return True
@@ -485,12 +485,12 @@ def find132pattern(nums) -> bool:
     return False
 
 
-def reverseWords(s: str) -> str:
+def reverse_words(s: str) -> str:
     """Разворот всех слов в строке"""
     return ' '.join(map(lambda word: word[::-1], s.split()))
 
 
-def winnerOfGame(colors: str) -> bool:
+def winner_of_game(colors: str) -> bool:
     """Выявление победителя в игре"""
     from collections import Counter
     from itertools import groupby
@@ -504,7 +504,7 @@ def winnerOfGame(colors: str) -> bool:
     return False
 
 
-def winnerOfGameImproved(colors: str) -> bool:
+def winner_of_game_improved(colors: str) -> bool:
     """Улучшенная версия без использования доп памяти"""
     alice_plays, bob_plays = 0, 0
     count = 1
@@ -527,7 +527,7 @@ def winnerOfGameImproved(colors: str) -> bool:
     return alice_plays > bob_plays
 
 
-def numIdenticalPairs(nums) -> int:
+def numIdentical_pairs(nums) -> int:
     """Найти все хорошие пары (nums[i] == nums[j] and i < j)"""
     res_dict = {}
     cnt = 0
@@ -541,7 +541,7 @@ def numIdenticalPairs(nums) -> int:
 
     return cnt
 
-def majorityElement(nums):
+def majority_element(nums):
     """Вывести числа, которые встречаются более n/3 раз в массиве"""
     from collections import Counter
     num_counts = Counter(nums)
@@ -556,6 +556,22 @@ def majorityElement(nums):
             result.append(num)
 
     return result
+
+
+def integer_break(n: int) -> int:
+    """Находит наибольшее произведение из разложения на слагаемые"""
+    if n == 2:
+        return 1
+    if n == 3:
+        return 2
+    q_3 = n // 3
+    mod = n % 3
+    if mod == 0:
+        return 3 ** q_3
+    elif mod == 1:
+        return (3 ** (q_3 - 1)) * 4
+    else:
+        return (3 ** q_3) * 2
 
 
 if __name__ == '__main__':
