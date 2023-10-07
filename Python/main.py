@@ -404,6 +404,7 @@ def remove_duplicates(nums) -> int:
             j += 1
     return j
 
+
 def remove_duplicate_letters(s) -> str:
     """Удаление повторяющихся символов и сортировка по последнему появлению"""
     stack = []
@@ -446,6 +447,7 @@ def decode_at_index(s: str, k: int) -> str:
         else:
             length -= 1
 
+
 def sort_array_by_parity(nums) -> list:
     """Сортировка по признаку чётности"""
     return [x for x in nums if x % 2 == 0] + [x for x in nums if x % 2 == 1]
@@ -471,6 +473,7 @@ def is_monotonic(nums) -> bool:
                 return False
 
     return True
+
 
 def find132pattern(nums) -> bool:
     """Решение задачи с паттерном 132"""
@@ -541,6 +544,7 @@ def numIdentical_pairs(nums) -> int:
 
     return cnt
 
+
 def majority_element(nums):
     """Вывести числа, которые встречаются более n/3 раз в массиве"""
     from collections import Counter
@@ -597,5 +601,5 @@ if __name__ == '__main__':
     # print(result)
 
     # For remove_duplicates()
-    nums = [1, 1, 2, 3, 3, 3, 5, 5, 5]  # Input
+    nums = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5]  # Input
     print(remove_duplicates(nums))  # test
