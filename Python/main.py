@@ -578,6 +578,23 @@ def integer_break(n: int) -> int:
         return (3 ** q_3) * 2
 
 
+def max_dot_product(nums1, nums2) -> int:
+    """Максимальное скалярное произведение"""
+    n = len(nums1)
+    m = len(nums2)
+    # Вспомогательная конструкция для хранения промежуточных результатов
+    dot_prod = [[float('-inf')] * (m + 1) for _ in range(n + 1)]
+
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            dot_prod[i][j] = max(nums1[i - 1] * nums2[j - 1],
+            dot_prod[i - 1][j - 1] + nums1[i - 1] * nums2[j - 1])
+            dot_prod[i][j] = max(dot_prod[i][j], dot_prod[i][j - 1])
+            dot_prod[i][j] = max(dot_prod[i][j], dot_prod[i - 1][j])
+
+    return dot_prod[n][m]
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
