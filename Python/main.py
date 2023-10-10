@@ -355,7 +355,9 @@ def min_usb_cost(n, m, c2, c5):
 
 
 def is_subsequence(self, s: str, t: str) -> bool:
-    """Есть ли набор символов из t в s"""
+    """
+        Есть ли набор символов из t в s
+    """
     i, j = 0, 0
     while i < len(s) and j < len(t):
         if s[i] == t[j]:
@@ -365,7 +367,9 @@ def is_subsequence(self, s: str, t: str) -> bool:
 
 
 def longest_str_chain(words):
-    """Поиск самой длинной цепочки (LC1048)"""
+    """
+        Поиск самой длинной цепочки (LC1048)
+    """
     dp = {}
     for w in sorted(words, key=len):
         dp[w] = max(dp.get(w[:i] + w[i + 1:], 0) + 1 for i in range(len(w)))
