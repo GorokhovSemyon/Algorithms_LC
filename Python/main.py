@@ -373,7 +373,9 @@ def longest_str_chain(words):
 
 
 def champagne_tower(poured: int, query_row: int, query_glass: int) -> float:
-    """Задача про пирамиду из бокалов (LC799)"""
+    """
+        Задача про пирамиду из бокалов (LC799)
+    """
     tower = [[0] * (i + 1) for i in range(query_row + 1)]
     tower[0][0] = poured
 
@@ -388,7 +390,9 @@ def champagne_tower(poured: int, query_row: int, query_glass: int) -> float:
 
 
 def find_the_difference(s: str, t: str) -> str:
-    """Find the difference (LC389) XOR!!!"""
+    """
+        Найти отличающийся элемента (LC389) XOR
+    """
     result = 0
     for char in s + t:
         result ^= ord(char)
@@ -396,7 +400,9 @@ def find_the_difference(s: str, t: str) -> str:
 
 
 def remove_duplicates(nums) -> int:
-    """Удаление дубликатов, работа внутри исходного отсортированного массива"""
+    """
+        Удаление дубликатов, работа внутри исходного отсортированного массива
+    """
     j = 1
     for i in range(1, len(nums)):
         if nums[i] != nums[i - 1]:
@@ -406,7 +412,9 @@ def remove_duplicates(nums) -> int:
 
 
 def remove_duplicate_letters(s) -> str:
-    """Удаление повторяющихся символов и сортировка по последнему появлению"""
+    """
+        Удаление повторяющихся символов и сортировка по последнему появлению
+    """
     stack = []
     seen = set()
     last_occ = {c: i for i, c in enumerate(s)}
@@ -423,7 +431,9 @@ def remove_duplicate_letters(s) -> str:
 
 
 def decode_at_index(s: str, k: int) -> str:
-    """Задача поиска символа в предварительно расшифрованной строке"""
+    """
+        Задача поиска символа в предварительно расшифрованной строке
+    """
     length = 0
     i = 0
 
@@ -449,12 +459,16 @@ def decode_at_index(s: str, k: int) -> str:
 
 
 def sort_array_by_parity(nums) -> list:
-    """Сортировка по признаку чётности"""
+    """
+        Сортировка по признаку чётности
+    """
     return [x for x in nums if x % 2 == 0] + [x for x in nums if x % 2 == 1]
 
 
 def is_monotonic(nums) -> bool:
-    """Проверка монотонности последовательности"""
+    """
+        Проверка монотонности последовательности
+    """
     if len(nums) < 2:
         return True
 
@@ -476,7 +490,9 @@ def is_monotonic(nums) -> bool:
 
 
 def find132pattern(nums) -> bool:
-    """Решение задачи с паттерном 132"""
+    """
+        Решение задачи с паттерном 132
+    """
     stack, last = [], float('-inf')
 
     for num in reversed(nums):
