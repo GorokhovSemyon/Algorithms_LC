@@ -619,6 +619,28 @@ def search_range(nums, target):
     return [left_index, right_index]
 
 
+def min_operations(nums) -> int:
+    """
+        Вычисляет минимальное количество операций
+        для того, чтобы выполнить условия:
+        - все элементы массива уникальны
+        - max(nums) - min(nums) == len(nums) - 1
+    """
+    from bisect import bisect_right
+    from sys import maxsize
+    n = len(nums)
+    nums = sorted(set(nums))
+    ans = maxsize
+
+    for i, s in enumerate(nums):
+        elem = s + n - 1
+        idx = bisect_right(nums, elem)
+
+        ans = min(ans, n - (idx - i))
+
+    return ans
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
@@ -642,5 +664,9 @@ if __name__ == '__main__':
     # print(result)
 
     # For remove_duplicates()
-    nums = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5]  # Input
-    print(remove_duplicates(nums))  # test
+    # nums = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5]  # Input
+    # print(remove_duplicates(nums))  # test
+
+    # For min_operations
+    nums = [1, 10, 100]
+    print(min_operations(nums))
