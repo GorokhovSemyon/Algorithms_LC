@@ -354,7 +354,7 @@ def min_usb_cost(n, m, c2, c5):
     return total_cost
 
 
-def is_subsequence(self, s: str, t: str) -> bool:
+def is_subsequence(s: str, t: str) -> bool:
     """
         Есть ли набор символов из t в s
     """
