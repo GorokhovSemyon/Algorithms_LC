@@ -563,7 +563,9 @@ def majority_element(nums):
 
 
 def integer_break(n: int) -> int:
-    """Находит наибольшее произведение из разложения на слагаемые"""
+    """
+        Находит наибольшее произведение из разложения на слагаемые
+    """
     if n == 2:
         return 1
     if n == 3:
@@ -579,7 +581,9 @@ def integer_break(n: int) -> int:
 
 
 def max_dot_product(nums1, nums2) -> int:
-    """Максимальное скалярное произведение"""
+    """
+        Максимальное скалярное произведение
+    """
     n = len(nums1)
     m = len(nums2)
     # Вспомогательная конструкция для хранения промежуточных результатов
@@ -595,7 +599,9 @@ def max_dot_product(nums1, nums2) -> int:
     return dot_prod[n][m]
 
 def search_range(nums, target):
-    """Найти индексы элементов справа и слева за O(log(n))"""
+    """
+        Найти индексы элементов справа и слева за O(log(n))
+    """
     def binary_search(nums, target, left):
         low, high = 0, len(nums) - 1
         index = -1
