@@ -489,12 +489,16 @@ def find132pattern(nums) -> bool:
 
 
 def reverse_words(s: str) -> str:
-    """Разворот всех слов в строке"""
+    """
+        Разворот всех слов в строке
+    """
     return ' '.join(map(lambda word: word[::-1], s.split()))
 
 
 def winner_of_game(colors: str) -> bool:
-    """Выявление победителя в игре"""
+    """
+        Выявление победителя в игре
+    """
     from collections import Counter
     from itertools import groupby
 
@@ -508,7 +512,9 @@ def winner_of_game(colors: str) -> bool:
 
 
 def winner_of_game_improved(colors: str) -> bool:
-    """Улучшенная версия без использования доп памяти"""
+    """
+        Улучшенная версия без использования доп памяти
+    """
     alice_plays, bob_plays = 0, 0
     count = 1
 
@@ -531,7 +537,9 @@ def winner_of_game_improved(colors: str) -> bool:
 
 
 def numIdentical_pairs(nums) -> int:
-    """Найти все хорошие пары (nums[i] == nums[j] and i < j)"""
+    """
+        Найти все хорошие пары (nums[i] == nums[j] and i < j)
+    """
     res_dict = {}
     cnt = 0
 
@@ -546,7 +554,9 @@ def numIdentical_pairs(nums) -> int:
 
 
 def majority_element(nums):
-    """Вывести числа, которые встречаются более n/3 раз в массиве"""
+    """
+        Вывести числа, которые встречаются более n/3 раз в массиве
+    """
     from collections import Counter
     num_counts = Counter(nums)
 
