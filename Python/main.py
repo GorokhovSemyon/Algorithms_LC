@@ -632,7 +632,7 @@ def search_range(nums, target):
     """
         Найти индексы элементов справа и слева за O(log(n))
     """
-    def binary_search(nums, target, left):
+    def binary_search(nums, target, left) -> list:
         low, high = 0, len(nums) - 1
         index = -1
         while low <= high:
@@ -675,6 +675,19 @@ def min_operations(nums) -> int:
         ans = min(ans, n - (idx - i))
 
     return ans
+
+
+def fullBloomFlowers(flowers, people) -> list:
+    """
+        Проверяет какое количество раскрывшихся цветов застанет
+        (время цветения в формате [начало, конец] в flowers)
+        человек пришедший во время (time) из списка people
+    """
+    from bisect import bisect_right, bisect_left
+    start = sorted([s for s, e in flowers])
+    end = sorted([e for s, e in flowers])
+
+    return [bisect_right(start, time) - bisect_left(end, time) for time in people]
 
 
 if __name__ == '__main__':
