@@ -689,6 +689,7 @@ def full_bloom_flowers(flowers, people) -> list:
 
     return [bisect_right(start, time) - bisect_left(end, time) for time in people]
 
+
 def find_in_mountain_array(target, mountain_arr) -> int:
     """
         Задача поиска target элемента в массиве, отражающем высоты
@@ -727,6 +728,22 @@ def find_in_mountain_array(target, mountain_arr) -> int:
     if result == -1:
         result = binary_search(peak_index + 1, mountain_arr.length() - 1, False)
     return result
+
+
+def min_cost_climbing_stairs(cost) -> int:
+        """
+            Минимальная стоимость достижения вершины
+            cost - список стоимостей перемещения на 1 или 2 ступеньки с i-й
+            prev1, prev2 - минимальная стоимость достижения предыдущих ступенек
+        """
+        n = len(cost)
+        prev1, prev2 = 0, 0
+
+        for i in range(2, n + 1):
+            current_cost = min(prev1 + cost[i - 1], prev2 + cost[i - 2])
+            prev2, prev1 = prev1, current_cost
+
+        return prev1
 
 
 if __name__ == '__main__':
