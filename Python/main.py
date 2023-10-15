@@ -269,7 +269,9 @@ def list_to_LL(arr):
 
 
 def reverse_linked_list(head: ListNode):
-    """Разворот односвязного списка O(n)"""
+    """
+        Разворот односвязного списка O(n)
+    """
     new_list = None
 
     while head:
@@ -282,7 +284,10 @@ def reverse_linked_list(head: ListNode):
 
 
 def check_inclusion(s1, s2):
-    """Проверка есть ли в каком-то виде перестановка строки s2 в s1"""
+    """
+        Проверка есть ли в каком-то виде
+        перестановка строки s2 в s1
+    """
     from collections import Counter
     cntr, w, match = Counter(s1), len(s1), 0
 
