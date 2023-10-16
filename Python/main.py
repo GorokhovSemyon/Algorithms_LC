@@ -756,6 +756,23 @@ def min_cost_climbing_stairs(cost) -> int:
         return prev1
 
 
+def getRow(rowIndex: int) -> list:
+    if rowIndex == 0:
+        return [1]
+    if rowIndex == 1:
+        return [1, 1]
+
+    res = [1]
+    prev = 1
+
+    for i in range(1, rowIndex + 1):
+        next_val = prev * (rowIndex - i + 1) // i
+        res.append(next_val)
+        prev = next_val
+
+    return res
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
