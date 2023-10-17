@@ -70,7 +70,9 @@ def compress(chars) -> int:
 
 
 class ZigzagIterator:
-    """Класс для реализации зигзагового итератора"""
+    """
+        Класс для реализации зигзагового итератора
+    """
 
     def __init__(self, v1, v2):
         self.data = [(len(v), iter(v)) for v in (v1, v2) if v]
@@ -95,13 +97,17 @@ class ZigzagIterator:
 
 
 def is_palindrome(s) -> bool:
-    """Приведение к строчным буквам и проверка на палиндром"""
+    """
+        Приведение к строчным буквам и проверка на палиндром
+    """
     s = [c.lower() for c in s if c.isalnum()]
     return all(s[i] == s[~i] for i in range(len(s) // 2))
 
 
 def is_one_edit_distance(s, t):
-    """Можно ли за одно изменение сделать строки равными"""
+    """
+        Можно ли за одно изменение сделать строки равными
+    """
     m, n = len(s), len(t)
     for i in range(min(m, n)):
         if s[i] != t[i]:
@@ -115,7 +121,10 @@ def is_one_edit_distance(s, t):
 
 
 def subarray_sum(nums, k):
-    """Находит количество подмассивов в текущем, которые в сумме - k"""
+    """
+        Находит количество подмассивов в текущем, которые в сумме - k
+    """
+
     res = 0
     prefix_sum = 0
     d = {0: 1}
