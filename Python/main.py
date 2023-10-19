@@ -870,7 +870,7 @@ if __name__ == '__main__':
     # print(min_operations(nums))
 
     # For backspace_compare
-    if (backspace_сompare("ash#", "asd#")):
-        print("Yes")
-    else:
-        print("No")
+    # if (backspace_сompare("ash#", "asd#")):
+    #     print("Yes")
+    # else:
+    #     print("No")
