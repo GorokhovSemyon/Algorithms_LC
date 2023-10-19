@@ -643,16 +643,18 @@ def max_dot_product(nums1, nums2) -> int:
     for i in range(1, n + 1):
         for j in range(1, m + 1):
             dot_prod[i][j] = max(nums1[i - 1] * nums2[j - 1],
-            dot_prod[i - 1][j - 1] + nums1[i - 1] * nums2[j - 1])
+                                 dot_prod[i - 1][j - 1] + nums1[i - 1] * nums2[j - 1])
             dot_prod[i][j] = max(dot_prod[i][j], dot_prod[i][j - 1])
             dot_prod[i][j] = max(dot_prod[i][j], dot_prod[i - 1][j])
 
     return dot_prod[n][m]
 
+
 def search_range(nums, target):
     """
         Найти индексы элементов справа и слева за O(log(n))
     """
+
     def binary_search(nums, target, left) -> list:
         low, high = 0, len(nums) - 1
         index = -1
@@ -752,19 +754,19 @@ def find_in_mountain_array(target, mountain_arr) -> int:
 
 
 def min_cost_climbing_stairs(cost) -> int:
-        """
+    """
             Минимальная стоимость достижения вершины
             cost - список стоимостей перемещения на 1 или 2 ступеньки с i-й
             prev1, prev2 - минимальная стоимость достижения предыдущих ступенек
         """
-        n = len(cost)
-        prev1, prev2 = 0, 0
+    n = len(cost)
+    prev1, prev2 = 0, 0
 
-        for i in range(2, n + 1):
-            current_cost = min(prev1 + cost[i - 1], prev2 + cost[i - 2])
-            prev2, prev1 = prev1, current_cost
+    for i in range(2, n + 1):
+        current_cost = min(prev1 + cost[i - 1], prev2 + cost[i - 2])
+        prev2, prev1 = prev1, current_cost
 
-        return prev1
+    return prev1
 
 
 def getRow(rowIndex: int) -> list:
@@ -782,6 +784,52 @@ def getRow(rowIndex: int) -> list:
         prev = next_val
 
     return res
+
+
+def backspace_сompare(s: str, t: str) -> bool:
+    i = len(s) - 1  # Идём от конца строки
+    j = len(t) - 1
+
+    skipS = 0  # Счётчик "#", количество указывает удалённость от корректного символа
+    skipT = 0
+
+    while i >= 0 or j >= 0:
+        while i >= 0:
+            if s[i] == "#":
+                skipS += 1  # Учёт "#"
+                i -= 1
+
+            elif skipS > 0:
+                skipS -= 1  # Пропускаем символы, которые как бы будут удалены
+                i -= 1
+
+            else:
+                break
+
+        while j >= 0:
+            if t[j] == "#":
+                skipT += 1  # Такая же логика
+                j -= 1
+
+            elif skipT > 0:
+                skipT -= 1
+                j -= 1
+
+            else:
+                break
+
+        print("Comparing", s[i], t[j])  # Debug
+
+        if i >= 0 and j >= 0 and s[i] != t[j]:  # Сравнивание текущих символов в обеих строках
+            return False
+
+        if (i >= 0) != (j >= 0):  # Also ensure that both the character indices are valid. If it is not valid,
+            return False  # it means that we are comparing a "#" with a valid character.
+
+        i -= 1
+        j -= 1
+
+    return True  # Если не вышли ни на одном return, то строки эквивалентны
 
 
 if __name__ == '__main__':
