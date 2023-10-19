@@ -866,5 +866,11 @@ if __name__ == '__main__':
     # print(remove_duplicates(nums))  # test
 
     # For min_operations
-    nums = [1, 10, 100]
-    print(min_operations(nums))
+    # nums = [1, 10, 100]
+    # print(min_operations(nums))
+
+    # For backspace_compare
+    if (backspace_сompare("ash#", "asd#")):
+        print("Yes")
+    else:
+        print("No")
