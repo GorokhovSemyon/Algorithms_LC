@@ -872,6 +872,30 @@ def remove_element(nums, val: int):
 
     return j
 
+def str_str(haystack: str, needle: str) -> int:
+    """
+    Проверяет есть ли подстрока в строке, если есть,
+    то возвращает индекс начала подстроки в строке
+    LC29
+    :param haystack:
+    :param needle:
+    :return: -1 / индекс первого вхождения
+    """
+    if len(needle) > len(haystack):
+        return -1
+
+    for i in range(len(haystack)):
+        if haystack[i] == needle[0]:
+            j = 1
+            while j < len(needle) and i + j < len(haystack):
+                if haystack[i + j] != needle[j]:
+                    break
+                j += 1
+            if j == len(needle):
+                return i
+
+    return -1
+
 
 if __name__ == '__main__':
     # Для group_anagram()
