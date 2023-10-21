@@ -836,11 +836,11 @@ def backspace_сompare(s: str, t: str) -> bool:
 
 def constrained_subset_sum(nums, k) -> int:
     """
-    Вернуть максимальную сумму подсписка длиной не менее k
-    LC1425
-    :param nums:
-    :param k:
-    :return: максимальная сумма
+        Вернуть максимальную сумму подсписка длиной не менее k
+        LC1425
+        :param nums:
+        :param k:
+        :return: максимальная сумма
     """
     from collections import deque
     dq = deque()
@@ -854,6 +854,23 @@ def constrained_subset_sum(nums, k) -> int:
             dq.append(i)
 
     return max(nums)
+
+def remove_element(nums, val: int):
+    """
+        Найти количество элементов списка, отличных от val
+        LC27
+        :param nums:
+        :param val:
+        :return: Количество элементов отличных от val
+    """
+    j = 0
+
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[j] = nums[i]
+            j += 1
+
+    return j
 
 
 if __name__ == '__main__':
