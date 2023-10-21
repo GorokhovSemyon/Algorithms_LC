@@ -834,7 +834,7 @@ def backspace_сompare(s: str, t: str) -> bool:
 
     return True  # Если не вышли ни на одном return, то строки эквивалентны
 
-def constrainedSubsetSum(nums, k) -> int:
+def constrained_subset_sum(nums, k) -> int:
     """
     Вернуть максимальную сумму подсписка длиной не менее k
     LC1425
