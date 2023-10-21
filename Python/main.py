@@ -822,9 +822,7 @@ def backspace_сompare(s: str, t: str) -> bool:
 
             else:
                 break
-
         # print("Comparing", s[i], t[j])  # Debug
-
         if i >= 0 and j >= 0 and s[i] != t[j]:  # Сравнивание текущих символов в обеих строках
             return False
 
