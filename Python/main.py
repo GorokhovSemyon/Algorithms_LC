@@ -897,6 +897,32 @@ def str_str(haystack: str, needle: str) -> int:
     return -1
 
 
+def maximumScore(nums, k: int) -> int:
+    """
+        Дан массив целых чисел nums и целое число k
+        Оценка подмассива определяется(i, j) как min(nums[i], nums[i+1],
+         ..., nums[j]) * (j - i + 1). Хороший подмассив — это подмассив,
+        в котором i <= k <= j
+        :param nums:
+        :param k:
+        :return: Возвращает максимально возможную оценку хорошего подмассива
+    """
+    left, right = k, k
+    min_val = nums[k]
+    max_score = min_val
+
+    while left > 0 or right < len(nums) - 1:
+        if left == 0 or (right < len(nums) - 1 and nums[right + 1] > nums[left - 1]):
+            right += 1
+        else:
+            left -= 1
+
+        min_val = min(min_val, nums[left], nums[right])
+        max_score = max(max_score, min_val * (right - left + 1))
+
+    return max_score
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
