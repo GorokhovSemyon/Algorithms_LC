@@ -925,10 +925,10 @@ def maximumScore(nums, k: int) -> int:
 
 def is_power_of_four(n) -> bool:
     """
-    Является ли число степенью четвёрки
-    LC342
-    :param n: Проверяемое число
-    :return: Да / Нет
+        Является ли число степенью четвёрки
+        LC342
+        :param n: Проверяемое число
+        :return: Да / Нет
     """
     mask = 0x55555555
     # return n > 0 and (n & (n - 1)) == 0 and (n & mask) == n
