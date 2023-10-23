@@ -923,6 +923,17 @@ def maximumScore(nums, k: int) -> int:
     return max_score
 
 
+def is_power_of_four(n) -> bool:
+    """
+    Является ли число степенью четвёрки
+    :param n:
+    :return:
+    """
+    mask = 0x55555555
+    # return n > 0 and (n & (n - 1)) == 0 and (n & mask) == n
+    return (n & mask) == n > 0 == (n & (n - 1))
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
