@@ -926,7 +926,7 @@ def maximumScore(nums, k: int) -> int:
 def is_power_of_four(n) -> bool:
     """
     Является ли число степенью четвёрки
-    :param n:
+    :param n: Проверяемое число
     :return:
     """
     mask = 0x55555555
