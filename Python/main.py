@@ -979,19 +979,19 @@ def largestValues(root) -> list:
         return []
 
     result = []
-    queue = deque([root])
+    dq = deque([root])
 
-    while queue:
-        curr_level_size = len(queue)
+    while dq:
+        curr_level_size = len(dq)
         max_val = float('-inf')
 
         for _ in range(curr_level_size):
-            node = queue.popleft()
+            node = dq.popleft()
             max_val = max(max_val, node.val)
 
             for child in [node.left, node.right]:
                 if child:
-                    queue.append(child)
+                    dq.append(child)
 
         result.append(max_val)
 
