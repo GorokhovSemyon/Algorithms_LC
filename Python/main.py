@@ -935,6 +935,36 @@ def is_power_of_four(n) -> bool:
     return (n & mask) == n > 0 == (n & (n - 1))
 
 
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+def largestValues(root) -> list:
+    """
+    Рекурсивное решение заачи поиска max
+    элемента на уровне бинарного дерева
+    :param root:
+    :return:
+    """
+    def dfs(node, depth):
+        if not node:
+            return
+
+        if depth == len(res):
+            res.append(node.val)
+        else:
+            res[depth] = max(res[depth], node.val)
+
+        dfs(node.right, depth + 1)
+        dfs(node.left, depth + 1)
+
+    res = []
+    dfs(root, 0)
+    return res
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
