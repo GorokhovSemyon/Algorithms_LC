@@ -941,7 +941,7 @@ def is_power_of_four(n) -> bool:
 #         self.val = val
 #         self.left = left
 #         self.right = right
-def largestValues(root) -> list:
+def largest_values_rec(root) -> list:
     """
         Рекурсивное решение заачи поиска max
         элемента на уровне бинарного дерева
@@ -966,7 +966,7 @@ def largestValues(root) -> list:
     return res
 
 
-def largestValues(root) -> list:
+def largest_values(root) -> list:
     """
         Рекурсивное решение заачи поиска max
         элемента на уровне бинарного дерева
@@ -1033,3 +1033,5 @@ if __name__ == '__main__':
     #     print("Yes")
     # else:
     #     print("No")
+
+    # For
