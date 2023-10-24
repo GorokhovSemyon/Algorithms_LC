@@ -945,6 +945,7 @@ def largestValues(root) -> list:
     """
         Рекурсивное решение заачи поиска max
         элемента на уровне бинарного дерева
+        LC515
         :param root: корень дерева
         :return: список максимумов
     """
@@ -963,6 +964,31 @@ def largestValues(root) -> list:
     res = []
     dfs(root, 0)
     return res
+
+
+def largestValues(root) -> list:
+    from collections import deque
+    if not root:
+        return []
+
+    result = []
+    queue = deque([root])
+
+    while queue:
+        curr_level_size = len(queue)
+        max_val = float('-inf')
+
+        for _ in range(curr_level_size):
+            node = queue.popleft()
+            max_val = max(max_val, node.val)
+
+            for child in [node.left, node.right]:
+                if child:
+                    queue.append(child)
+
+        result.append(max_val)
+
+    return result
 
 
 if __name__ == '__main__':
