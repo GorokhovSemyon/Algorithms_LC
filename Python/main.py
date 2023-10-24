@@ -968,10 +968,11 @@ def largestValues(root) -> list:
 
 def largestValues(root) -> list:
     """
-    Рекурсивное решение заачи поиска max
-    элемента на уровне бинарного дерева
-    :param root: корень дерева
-    :return: список максимумов
+        Рекурсивное решение заачи поиска max
+        элемента на уровне бинарного дерева
+        LC515 v2.0
+        :param root: корень дерева
+        :return: список максимумов
     """
     from collections import deque
     if not root:
