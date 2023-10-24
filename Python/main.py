@@ -943,10 +943,10 @@ def is_power_of_four(n) -> bool:
 #         self.right = right
 def largestValues(root) -> list:
     """
-    Рекурсивное решение заачи поиска max
-    элемента на уровне бинарного дерева
-    :param root:
-    :return:
+        Рекурсивное решение заачи поиска max
+        элемента на уровне бинарного дерева
+        :param root: корень дерева
+        :return: список максимумов
     """
     def dfs(node, depth):
         if not node:
