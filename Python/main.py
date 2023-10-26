@@ -1000,6 +1000,7 @@ def largest_values(root) -> list:
 def num_factored_binary_trees(arr):
     """
     Подсчёт количества поддеревьев
+    LC823
     :param arr: массив элементов из которых строятся поддеревья
     :return: количество возможных поддеревьев
     """
