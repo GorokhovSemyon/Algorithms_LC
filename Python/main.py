@@ -997,6 +997,24 @@ def largest_values(root) -> list:
 
     return result
 
+def numFactoredBinaryTrees(arr):
+    arr.sort()
+    # сортировка для гарантии того, что при переборе для предыдущих
+    # элементов уже подсчитано число возможных поддереьев
+
+    dct = {elem: 1 for elem in arr}
+    # сохраняем все элементы входного массива в словарь (считаем что каждый - корень)
+    # так можно сделать, так как каждое число встречаптся ровно один раз
+
+    for elem in arr:
+        for factor in arr:
+            if factor == elem:
+                break
+            if elem % factor == 0 and elem // factor in dct:
+                dct[elem] += dct[factor] * dct[elem // factor]
+
+    return sum(dct.values()) % (pow(10, 9) + 7)
+
 
 def kth_grammar(n, k):
     """
@@ -1064,5 +1082,3 @@ if __name__ == '__main__':
     #     print("Yes")
     # else:
     #     print("No")
-
-    # For
