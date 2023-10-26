@@ -997,7 +997,12 @@ def largest_values(root) -> list:
 
     return result
 
-def numFactoredBinaryTrees(arr):
+def num_factored_binary_trees(arr):
+    """
+    
+    :param arr:
+    :return:
+    """
     arr.sort()
     # сортировка для гарантии того, что при переборе для предыдущих
     # элементов уже подсчитано число возможных поддереьев
