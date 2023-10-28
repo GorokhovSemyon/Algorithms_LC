@@ -1051,6 +1051,28 @@ def kth_grammar(n, k):
     # Возвращаем 0, если флаг указывает на совпадение значений; в противном случае возвращаем 1.
     return 0 if are_val_same else 1
 
+def countVowelPermutation(n: int) -> int:
+    """
+        Подсчёт комбинаций с предусловиями
+        LC1220
+        :param n: длина строки
+        :return: количество комбинаций
+    """
+    MOD = 10 ** 9 + 7
+
+    a, e, i, o, u = 1, 1, 1, 1, 1
+
+    for _ in range(1, n):
+        a_next = e
+        e_next = (a + i) % MOD
+        i_next = (a + e + o + u) % MOD
+        o_next = (i + u) % MOD
+        u_next = a
+
+        a, e, i, o, u = a_next, e_next, i_next, o_next, u_next
+
+    return (a + e + i + o + u) % MOD
+
 
 
 if __name__ == '__main__':
