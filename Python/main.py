@@ -1051,7 +1051,7 @@ def kth_grammar(n, k):
     # Возвращаем 0, если флаг указывает на совпадение значений; в противном случае возвращаем 1.
     return 0 if are_val_same else 1
 
-def countVowelPermutation(n: int) -> int:
+def count_vowel_permutation(n: int) -> int:
     """
         Подсчёт комбинаций с предусловиями
         LC1220
