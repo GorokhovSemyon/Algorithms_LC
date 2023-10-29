@@ -1076,6 +1076,7 @@ def count_vowel_permutation(n: int) -> int:
 def poorPigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
     """
         Определить отравленное ведро
+        LC458
         :param buckets: количество вёдер
         :param minutesToDie: время на тест...
         :param minutesToTest: время, за которое нужно определить
