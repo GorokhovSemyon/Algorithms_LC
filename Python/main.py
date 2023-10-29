@@ -1075,11 +1075,11 @@ def count_vowel_permutation(n: int) -> int:
 
 def poorPigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
     """
-    Определить отравленное ведро
-    :param buckets: количество вёдер
-    :param minutesToDie: время на тест...
-    :param minutesToTest: время, за которое нужно определить
-    :return: количество требуемых свинок(
+        Определить отравленное ведро
+        :param buckets: количество вёдер
+        :param minutesToDie: время на тест...
+        :param minutesToTest: время, за которое нужно определить
+        :return: количество требуемых свинок(
     """
     ratio = minutesToTest / minutesToDie + 1
 
