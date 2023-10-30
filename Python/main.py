@@ -1091,6 +1091,20 @@ def poorPigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
 
     return poor_pigs
 
+def sortByBits(arr):
+    """
+        Сортировка по количеству единиц в бинарном представлении
+        LC1356
+        :param arr: список входный чисел
+        :return: отсортированный список
+    """
+    def binary_sort_key(num):
+        cnt_of_positive_bits = bin(num).count('1')
+        return (cnt_of_positive_bits, num)
+
+    arr.sort(key=binary_sort_key)
+
+    return arr
 
 
 if __name__ == '__main__':
