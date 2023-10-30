@@ -1091,7 +1091,7 @@ def poorPigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
 
     return poor_pigs
 
-def sortByBits(arr):
+def sort_by_bits(arr):
     """
         Сортировка по количеству единиц в бинарном представлении
         LC1356
