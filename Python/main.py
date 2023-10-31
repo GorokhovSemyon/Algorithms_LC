@@ -1106,7 +1106,7 @@ def sort_by_bits(arr):
 
     return arr
 
-def find_array(pref: List[int]) -> List[int]:
+def find_array(pref) -> list:
     """
     Восстановить исходный список
         LC2433
