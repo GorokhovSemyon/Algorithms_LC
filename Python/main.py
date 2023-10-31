@@ -1106,12 +1106,12 @@ def sort_by_bits(arr):
 
     return arr
 
-def findArray(pref: List[int]) -> List[int]:
+def find_array(pref: List[int]) -> List[int]:
     """
     Восстановить исходный список
-    LC2433
-    :param pref: список после применения к нему xor
-    :return: исходный сптсок
+        LC2433
+        :param pref: список после применения к нему xor
+        :return: исходный сптсок
     """"""
     return [pref[0]] + [pref[i] ^ pref[i - 1] for i in range(1, len(pref))
 
