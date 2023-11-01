@@ -1122,7 +1122,7 @@ if __name__ == '__main__':
     # print(group_anagrams(input_strs))
 
     # Для reverse_linked_list()
-    # tmp = list_to_LL([1, 2, 3, 4, 5])
+    # tmp = list_to_LL([1, 2, 3, 4])
     # tmp2 = list_to_LL([1, 3, 4, 7])
     # tmp3 = list_to_LL([2, 4, 6])
     #
