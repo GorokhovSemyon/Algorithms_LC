@@ -1111,12 +1111,12 @@ def sort_by_bits(arr):
 
 def find_array(pref) -> list:
     """
-    Восстановить исходный список
+        Восстановить исходный список
         LC2433
         :param pref: список после применения к нему xor
-        :return: исходный сптсок
-    """"""
-    return [pref[0]] + [pref[i] ^ pref[i - 1] for i in range(1, len(pref))
+        :return: исходный список
+    """
+    return [pref[0]] + [pref[i] ^ pref[i - 1] for i in range(1, len(pref))]
 
 
 if __name__ == '__main__':
