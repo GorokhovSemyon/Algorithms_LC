@@ -1,5 +1,7 @@
 def is_reflected(points) -> bool:
-    """Найти линию, паралельную y, которая отражает точки (O(n))"""
+    """
+        Найти линию, паралельную y, которая отражает точки (O(n))
+    """
     min_x, max_x = float('inf'), float('-inf')
     point_set = set()
     for x, y in points:
