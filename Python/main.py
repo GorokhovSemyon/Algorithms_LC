@@ -35,7 +35,9 @@ def longest_subarray(nums) -> int:
 
 
 def summary_ranges(nums) -> str:
-    """Превратить запись в отсортированном массиве в более короткую"""
+    """
+        Превратить запись в отсортированном массиве в более короткую
+    """
     if not nums:
         return []
     ranges = []
