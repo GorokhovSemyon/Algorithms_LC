@@ -57,7 +57,9 @@ def summary_ranges(nums) -> str:
 
 
 def compress(chars) -> int:
-    """Скомпрессовать строку аааа -> а4 и т.п."""
+    """
+        Скомпрессовать строку аааа -> а4 и т.п.
+    """
     ans = 0
     i = 0
     while i < len(chars):
