@@ -659,6 +659,9 @@ def max_dot_product(nums1, nums2) -> int:
 def search_range(nums, target):
     """
         Найти индексы элементов справа и слева за O(log(n))
+        :param nums:
+        :param target:
+        :return: пара индексов
     """
     def binary_search(nums, target, left) -> list:
         low, high = 0, len(nums) - 1
