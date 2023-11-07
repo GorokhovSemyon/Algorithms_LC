@@ -150,7 +150,9 @@ def subarray_sum(nums, k):
 
 
 def move_zeros(nums) -> None:
-    """Перемещение нулей в конец массива"""
+    """
+        Перемещение нулей в конец массива
+    """
     i = 0
     for j in range(len(nums)):
         if nums[j] != 0:
