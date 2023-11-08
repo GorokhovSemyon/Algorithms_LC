@@ -1130,6 +1130,28 @@ def find_array(pref) -> list:
     return [pref[0]] + [pref[i] ^ pref[i - 1] for i in range(1, len(pref))]
 
 
+def is_reachable_at_time(sx: int, sy: int, fx: int, fy: int, t: int) -> bool:
+    """
+        Проверка, можно ли достичь конечной точки из начальной ровно за t единиц времени
+        LC2849
+        :param sx: x координата начальной точки
+        :param sy: y координата начальной точки
+        :param fx: x координата конечной точки
+        :param fy: y координата конечной точки
+        :param t: количество единиц времени
+        :return: да или нет
+    """
+    xDiff = abs(sx - fx)
+    yDiff = abs(sy - fy)
+
+    # особый случай, который гарантированно False это связано с тем что за 1 единицу
+    # времени нельзя выйти и вернуться в точку (если начальная и конечная совпадают)
+    if xDiff == 0 and yDiff == 0 and t == 1:
+        return False
+
+    return (min(xDiff, yDiff) + abs(xDiff - yDiff)) <= t
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
