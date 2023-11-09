@@ -1038,13 +1038,13 @@ def num_factored_binary_trees(arr):
 
 def kth_grammar(n, k):
     """
-    Задача определения, какой элемент стоит
-    на k-й позиции в n-м уровне
-    LC779
-    :param self:
-    :param n:
-    :param k:
-    :return:
+        Задача определения, какой элемент стоит
+        на k-й позиции в n-м уровне
+        LC779
+        :param self:
+        :param n:
+        :param k:
+        :return:
     """
     # Инициализируем флаг для отслеживания совпадения значений k и первого элемента.
     are_val_same = True
