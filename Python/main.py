@@ -494,6 +494,8 @@ def decode_at_index(s: str, k: int) -> str:
 def sort_array_by_parity(nums) -> list:
     """
         Сортировка по признаку чётности
+        :param nums:
+        :return:
     """
     return [x for x in nums if x % 2 == 0] + [x for x in nums if x % 2 == 1]
 
