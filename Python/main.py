@@ -504,7 +504,7 @@ def is_monotonic(nums) -> bool:
     """
         Проверка монотонности последовательности
         :param nums:
-        :return:
+        :return: да или нет
     """
     if len(nums) < 2:
         return True
