@@ -503,7 +503,7 @@ def sort_array_by_parity(nums) -> list:
 def is_monotonic(nums) -> bool:
     """
         Проверка монотонности последовательности
-        :param nums:
+        :param nums: входной список
         :return: да или нет
     """
     if len(nums) < 2:
