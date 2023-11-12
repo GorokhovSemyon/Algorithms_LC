@@ -504,7 +504,7 @@ def is_monotonic(nums) -> bool:
     """
         Проверка монотонности последовательности
         :param nums: входной список
-        :return: да или нет
+        :return: да/нет
     """
     if len(nums) < 2:
         return True
@@ -665,8 +665,8 @@ def max_dot_product(nums1, nums2) -> int:
 def search_range(nums, target):
     """
         Найти индексы элементов справа и слева за O(log(n))
-        :param nums:
-        :param target:
+        :param nums: входной массив
+        :param target: элемент - цель
         :return: пара индексов
     """
     def binary_search(nums, target, left) -> list:
