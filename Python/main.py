@@ -1157,6 +1157,21 @@ def is_reachable_at_time(sx, sy, fx, fy, t) -> bool:
     return (min(xDiff, yDiff) + abs(xDiff - yDiff)) <= t
 
 
+def countPalindromicSubsequence(s: str) -> int:
+    """
+        Находит все возможные палиндромы длины 3
+        LC1930
+        :param s: входная строка
+        :return: количество возможных палиндромов
+    """
+    count = 0
+    for i in range(26):
+        l, r = s.find(chr(i + 97)), s.rfind(chr(i + 97))
+        if l != -1 and r != -1:
+            count += len(set(s[l + 1:r]))
+    return count
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
