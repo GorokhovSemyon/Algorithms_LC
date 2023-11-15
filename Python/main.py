@@ -1157,7 +1157,7 @@ def is_reachable_at_time(sx, sy, fx, fy, t) -> bool:
     return (min(xDiff, yDiff) + abs(xDiff - yDiff)) <= t
 
 
-def countPalindromicSubsequence(s: str) -> int:
+def count_palindromic_subsequence(s: str) -> int:
     """
         Находит все возможные палиндромы длины 3
         LC1930
