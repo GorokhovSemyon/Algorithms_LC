@@ -807,8 +807,8 @@ def backspace_сompare(s: str, t: str) -> bool:
     """
         Решение задачи сравнения строк, если внутри
         них # эквивалентен backspace
-        :param s:
-        :param t:
+        :param s: входная строка
+        :param t: строчка для сравнения
         :return: bool
     """
     i = len(s) - 1  # Идём от конца строки
