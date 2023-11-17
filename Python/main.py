@@ -806,7 +806,7 @@ def getRow(rowIndex: int) -> list:
 def backspace_сompare(s: str, t: str) -> bool:
     """
         Решение задачи сравнения строк, если внутри
-        них # эквивалентен backspace
+        них # == backspace
         :param s: входная строка
         :param t: строчка для сравнения
         :return: bool
