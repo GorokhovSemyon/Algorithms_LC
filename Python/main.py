@@ -789,7 +789,7 @@ def min_cost_climbing_stairs(cost) -> int:
     return prev1
 
 
-def getRow(rowIndex: int) -> list:
+def get_row(rowIndex: int) -> list:
     if rowIndex == 0:
         return [1]
     if rowIndex == 1:
