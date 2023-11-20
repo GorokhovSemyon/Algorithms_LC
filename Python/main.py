@@ -719,6 +719,9 @@ def full_bloom_flowers(flowers, people) -> list:
         Проверяет какое количество раскрывшихся цветов застанет
         (время цветения в формате [начало, конец] в flowers)
         человек пришедший во время (time) из списка people
+        :param flowers:
+        :param people:
+        :return:
     """
     from bisect import bisect_right, bisect_left
     start = sorted([s for s, e in flowers])
