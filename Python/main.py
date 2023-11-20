@@ -1095,7 +1095,7 @@ def count_vowel_permutation(n: int) -> int:
 
     return (a + e + i + o + u) % MOD
 
-def poorPigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
+def poor_pigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
     """
         Определить отравленное ведро
         LC458
