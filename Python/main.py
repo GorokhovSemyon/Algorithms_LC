@@ -771,7 +771,7 @@ def find_in_mountain_array(target, mountain_arr) -> int:
 
 def min_cost_climbing_stairs(cost) -> int:
     """
-        Минимальная стоимость достижения вершины
+        Мин стоимость достижения вершины
         :param cost: список стоимостей перемещения на 1 или 2 ступеньки с i-й
         prev1, prev2 - мин стоимость достижения предыдущих ступенек
         :return: мин стоимость
