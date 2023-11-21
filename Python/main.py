@@ -696,7 +696,7 @@ def min_operations(nums) -> int:
     """
         Вычисляет минимальное количество операций
         для того, чтобы выполнить условия:
-        - все элементы массива уникальны
+        - элементы массива уникальны
         - max(nums) - min(nums) == len(nums) - 1
     """
     from bisect import bisect_right
