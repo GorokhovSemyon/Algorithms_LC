@@ -1174,7 +1174,8 @@ def count_palindromic_subsequence(s: str) -> int:
             count += len(set(s[l + 1:r]))
     return count
 
-def findDiagonalOrder(A):
+
+def find_diagonal_order(A):
     """
         Вывод последовательно всех диагоналей сонаправленных главной
         LC1424
@@ -1186,6 +1187,7 @@ def findDiagonalOrder(A):
     for i in range(len(A)):
         for j in range(len(A[i])):
             d[i + j].append(A[i][j])
+
     return [v for k in d.keys() for v in reversed(d[k])]
 
 
