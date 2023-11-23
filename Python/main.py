@@ -1176,8 +1176,9 @@ def count_palindromic_subsequence(s: str) -> int:
 
 def findDiagonalOrder(A):
     """
-    :param A: List[List[int]]
-    :return: List[int]
+        LC1424
+        :param A: List[List[int]]
+        :return: List[int]
     """
     from collections import defaultdict
     d = defaultdict(list)
