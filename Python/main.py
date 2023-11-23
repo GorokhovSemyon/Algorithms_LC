@@ -1176,6 +1176,7 @@ def count_palindromic_subsequence(s: str) -> int:
 
 def findDiagonalOrder(A):
     """
+        Вывод последовательно всех диагоналей сонаправленных главной
         LC1424
         :param A: List[List[int]]
         :return: List[int]
