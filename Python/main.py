@@ -1203,7 +1203,11 @@ def find_diagonal_order(input_list):
     return [v for k in d.keys() for v in reversed(d[k])]
 
 
-def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
+def getSumAbsoluteDifferences(nums):
+    """
+    :param nums: Входной список
+    :return: List[int]
+    """
     # Sum(|Aj - Ai|) == tmp + (2*i-n)*x - total
     n = len(nums)
     tmp = 0  # член суммы Sum(Aj), где i < j
