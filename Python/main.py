@@ -1191,6 +1191,20 @@ def find_diagonal_order(input_list):
     return [v for k in d.keys() for v in reversed(d[k])]
 
 
+def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
+    # Sum(|Aj - Ai|) == tmp + (2*i-n)*x - total
+    n=len(nums)
+    tmp=0 # член суммы Sum(Aj), где i < j
+    total=sum(nums) # член разложения суммы Sum(Aj), где j < i
+    ans=[0]*n
+
+    for i, x in enumerate(nums):
+        ans[i]=(2*i-n)*x+total-tmp
+        tmp+=x
+        total-=x
+    return ans
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
