@@ -1203,7 +1203,7 @@ def find_diagonal_order(input_list):
     return [v for k in d.keys() for v in reversed(d[k])]
 
 
-def getSumAbsoluteDifferences(nums):
+def get_sum_absolute_differences(nums):
     """
         LC1685
         :param nums: Входной список
