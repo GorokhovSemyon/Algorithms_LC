@@ -669,6 +669,7 @@ def search_range(nums, target):
         :param target: элемент - цель
         :return: пара индексов
     """
+
     def binary_search(nums, target, left) -> list:
         low, high = 0, len(nums) - 1
         index = -1
@@ -737,6 +738,7 @@ def find_in_mountain_array(target, mountain_arr) -> int:
         :param mountain_arr: список вершин
         :return: индекс целевой высоты
     """
+
     def find_peak(mountain_arr):
         left, right = 0, mountain_arr.length() - 1
         while left < right:
@@ -856,6 +858,7 @@ def backspace_сompare(s: str, t: str) -> bool:
 
     return True  # Если не вышли ни на одном return, то строки эквивалентны
 
+
 def constrained_subset_sum(nums, k) -> int:
     """
         Вернуть максимальную сумму подсписка длиной не менее k
@@ -877,6 +880,7 @@ def constrained_subset_sum(nums, k) -> int:
 
     return max(nums)
 
+
 def remove_element(nums, val: int):
     """
         Найти количество элементов списка, отличных от val
@@ -893,6 +897,7 @@ def remove_element(nums, val: int):
             j += 1
 
     return j
+
 
 def str_str(haystack: str, needle: str) -> int:
     """
@@ -971,6 +976,7 @@ def largest_values_rec(root) -> list:
         :param root: корень дерева
         :return: список максимумов
     """
+
     def dfs(node, depth):
         if not node:
             return
@@ -1019,6 +1025,7 @@ def largest_values(root) -> list:
 
     return result
 
+
 def num_factored_binary_trees(arr):
     """
         Подсчёт количества поддеревьев
@@ -1058,7 +1065,7 @@ def kth_grammar(n, k):
     are_val_same = True
 
     # Рассчитываем общее количество элементов в n-й строке, которое равно 2^(n-1).
-    n = 2**(n - 1)
+    n = 2 ** (n - 1)
 
     # Продолжаем выполнение до тех пор, пока не достигнем первой строки.
     while n != 1:
@@ -1072,6 +1079,7 @@ def kth_grammar(n, k):
 
     # Возвращаем 0, если флаг указывает на совпадение значений; в противном случае возвращаем 1.
     return 0 if are_val_same else 1
+
 
 def count_vowel_permutation(n: int) -> int:
     """
@@ -1095,6 +1103,7 @@ def count_vowel_permutation(n: int) -> int:
 
     return (a + e + i + o + u) % MOD
 
+
 def poor_pigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
     """
         Определить отравленное ведро
@@ -1113,6 +1122,7 @@ def poor_pigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
 
     return poor_pigs
 
+
 def sort_by_bits(arr):
     """
         Сортировка по количеству единиц в бинарном представлении
@@ -1120,6 +1130,7 @@ def sort_by_bits(arr):
         :param arr: список чисел
         :return: spec_sort(arr)
     """
+
     def binary_sort_key(num):
         cnt_of_positive_bits = bin(num).count('1')
         return (cnt_of_positive_bits, num)
@@ -1127,6 +1138,7 @@ def sort_by_bits(arr):
     arr.sort(key=binary_sort_key)
 
     return arr
+
 
 def find_array(pref) -> list:
     """
@@ -1193,15 +1205,15 @@ def find_diagonal_order(input_list):
 
 def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
     # Sum(|Aj - Ai|) == tmp + (2*i-n)*x - total
-    n=len(nums)
-    tmp=0 # член суммы Sum(Aj), где i < j
-    total=sum(nums) # член разложения суммы Sum(Aj), где j < i
-    ans=[0]*n
+    n = len(nums)
+    tmp = 0  # член суммы Sum(Aj), где i < j
+    total = sum(nums)  # член разложения суммы Sum(Aj), где j < i
+    ans = [0] * n
 
     for i, x in enumerate(nums):
-        ans[i]=(2*i-n)*x+total-tmp
-        tmp+=x
-        total-=x
+        ans[i] = (2 * i - n) * x + total - tmp
+        tmp += x
+        total -= x
     return ans
 
 
