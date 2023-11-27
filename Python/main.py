@@ -1205,6 +1205,7 @@ def find_diagonal_order(input_list):
 
 def get_sum_absolute_differences(nums):
     """
+        Найти список, в котором разница между соседями фиксирована
         LC1685
         :param nums: Входной список
         :return: List[int]
