@@ -1222,6 +1222,13 @@ def get_sum_absolute_differences(nums):
         total -= x
     return ans
 
+def hamming_weight(n: int) -> int:
+    pos_bit_cnt = 0
+    while n != 0:
+        n &= n - 1
+        pos_bit_cnt += 1
+    return pos_bit_cnt
+
 
 if __name__ == '__main__':
     # Для group_anagram()
