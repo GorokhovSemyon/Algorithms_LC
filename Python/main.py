@@ -1222,7 +1222,7 @@ def get_sum_absolute_differences(nums):
         total -= x
     return ans
 
-def hamming_weight(n: int) -> int:
+def hamming_weight(n):
     """
         Нахождения количества положительных битов
         LC191
