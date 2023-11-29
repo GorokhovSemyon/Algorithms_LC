@@ -1223,6 +1223,11 @@ def get_sum_absolute_differences(nums):
     return ans
 
 def hamming_weight(n: int) -> int:
+    """
+    LC191
+    :param n: входной параметр битов [int]
+    :return: количество единиц [int]
+    """
     pos_bit_cnt = 0
     while n != 0:
         n &= n - 1
