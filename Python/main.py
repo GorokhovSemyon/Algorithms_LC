@@ -1207,7 +1207,7 @@ def get_sum_absolute_differences(nums):
     """
         Найти список, в котором разница между соседями фиксирована
         LC1685
-        :param nums: Входной список
+        :param nums: Входной список List[int]
         :return: List[int]
     """
     # Sum(|Aj - Ai|) == tmp + (2*i-n)*x - total
