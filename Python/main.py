@@ -1235,11 +1235,11 @@ def hamming_weight(n):
         pos_bit_cnt += 1
     return pos_bit_cnt
 
-def arrayStringsAreEqual(word1: List[str], word2: List[str]) -> bool:
+def arrayStringsAreEqual(word1, word2) -> bool:
     """
     LC1662
-    :param word1:
-    :param word2:
+    :param word1: List[str]
+    :param word2: List[str]
     :return:
     """
     if ''.join(word1) == ''.join(word2):
