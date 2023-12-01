@@ -1237,10 +1237,11 @@ def hamming_weight(n):
 
 def arrayStringsAreEqual(word1, word2) -> bool:
     """
-    LC1662
-    :param word1: List[str]
-    :param word2: List[str]
-    :return:
+        Сравнение двух списков по внутренним символам
+        LC1662
+        :param word1: List[str]
+        :param word2: List[str]
+        :return:
     """
     if ''.join(word1) == ''.join(word2):
         return True
