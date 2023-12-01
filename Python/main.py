@@ -1239,9 +1239,9 @@ def arrayStringsAreEqual(word1, word2) -> bool:
     """
         Сравнение двух списков по внутренним символам
         LC1662
-        :param word1: List[str]
-        :param word2: List[str]
-        :return:
+        :param word1: Первой слово [List[str]]
+        :param word2: Второе слово [List[str]]
+        :return: Да/Нет
     """
     if ''.join(word1) == ''.join(word2):
         return True
