@@ -1128,7 +1128,7 @@ def sort_by_bits(arr):
         Сортировка по количеству единиц в бинарном представлении
         LC1356
         :param arr: список чисел
-        :return: spec_sort(arr)
+        :return: специально отсортированный список [List[int]]
     """
 
     def binary_sort_key(num):
