@@ -1056,7 +1056,6 @@ def kth_grammar(n, k):
         Задача определения, какой элемент стоит
         на k-й позиции в n-м уровне
         LC779
-        :param self:
         :param n:
         :param k:
         :return:
@@ -1110,8 +1109,8 @@ def poor_pigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
         LC458
         :param buckets: количество вёдер
         :param minutesToDie: время на тест...
-        :param minutesToTest: время, за которое нужно определить
-        :return: количество требуемых свинок(
+        :param minutesToTest: Время для определения
+        :return: количество требуемых свинок
     """
     ratio = minutesToTest / minutesToDie + 1
 
