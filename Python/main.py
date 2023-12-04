@@ -37,6 +37,8 @@ def longest_subarray(nums) -> int:
 def summary_ranges(nums) -> str:
     """
         Превратить запись в отсортированном массиве в более короткую
+        :param nums:
+        :return:
     """
     if not nums:
         return []
