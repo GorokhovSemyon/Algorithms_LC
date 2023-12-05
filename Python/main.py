@@ -37,7 +37,7 @@ def longest_subarray(nums) -> int:
 def summary_ranges(nums) -> str:
     """
         Превратить запись в отсортированном массиве в более короткую
-        :param nums:
+        :param nums: входной список [List[int]]
         :return:
     """
     if not nums:
