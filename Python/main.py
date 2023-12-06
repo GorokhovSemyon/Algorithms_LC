@@ -38,7 +38,7 @@ def summary_ranges(nums) -> str:
     """
         Превратить запись в отсортированном массиве в более короткую
         :param nums: входной список [List[int]]
-        :return:
+        :return: сокращённая запись списка [List[int]]
     """
     if not nums:
         return []
