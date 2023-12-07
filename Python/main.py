@@ -1250,7 +1250,7 @@ def arrayStringsAreEqual(word1, word2) -> bool:
 
 def largestOddNumber(num: str) -> str:
     """
-
+    LC1903
     :param num:
     :return:
     """
