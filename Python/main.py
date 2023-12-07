@@ -1248,6 +1248,18 @@ def arrayStringsAreEqual(word1, word2) -> bool:
         return True
     return False
 
+def largestOddNumber(num: str) -> str:
+    """
+
+    :param num:
+    :return:
+    """
+    for i in range(len(num) - 1, -1, -1):
+        if int(num[i]) % 2 != 0:
+            return num[:i + 1]
+
+    return ""
+
 
 if __name__ == '__main__':
     # Для group_anagram()
