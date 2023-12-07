@@ -1248,12 +1248,12 @@ def arrayStringsAreEqual(word1, word2) -> bool:
         return True
     return False
 
-def largestOddNumber(num: str) -> str:
+def largestOddNumber(num) -> str:
     """
     Найти наибольшее нечётное число в строке
     LC1903
     :param num: входная строка [str]
-    :return:
+    :return: наибольшее число либо ""
     """
     for i in range(len(num) - 1, -1, -1):
         if int(num[i]) % 2 != 0:
