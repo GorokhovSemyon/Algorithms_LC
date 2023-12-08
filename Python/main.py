@@ -889,7 +889,7 @@ def remove_element(nums, val: int):
         LC27
         :param nums:
         :param val:
-        :return: Количество элементов отличных от val
+        :return: Количество отличных от val
     """
     j = 0
 
