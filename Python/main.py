@@ -1248,7 +1248,7 @@ def arrayStringsAreEqual(word1, word2) -> bool:
         return True
     return False
 
-def largestOddNumber(num) -> str:
+def largest_odd_number(num) -> str:
     """
         Найти наибольшее нечётное число в строке
         LC1903
