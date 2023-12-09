@@ -1253,7 +1253,7 @@ def largest_odd_number(num) -> str:
         Найти наибольшее нечётное число в строке
         LC1903
         :param num: входная строка [str]
-        :return: наибольшее число либо ""
+        :return: строка с наибольшим числом / ""
     """
     for i in range(len(num) - 1, -1, -1):
         if int(num[i]) % 2 != 0:
