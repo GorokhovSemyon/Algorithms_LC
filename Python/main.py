@@ -1261,6 +1261,19 @@ def largest_odd_number(num) -> str:
 
     return ""
 
+def max_product(nums) -> int:
+    max = nums[0]
+    prev_max = 0
+    for i in range(1, len(nums)):
+        if nums[i] > max:
+            prev_max = max
+            max = nums[i]
+        else:
+            if nums[i] > prev_max:
+                prev_max = nums[i]
+
+    return (max - 1) * (prev_max - 1)
+
 
 if __name__ == '__main__':
     # Для group_anagram()
