@@ -1263,6 +1263,7 @@ def largest_odd_number(num) -> str:
 
 def max_product(nums) -> int:
     """
+        Нахождение максимума и пред максимума
         LC1464
         :param nums: входной список
         :return: (max-1)(prev_max-1)
