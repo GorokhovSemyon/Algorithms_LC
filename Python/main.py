@@ -1263,9 +1263,9 @@ def largest_odd_number(num) -> str:
 
 def max_product(nums) -> int:
     """
-    LC1464
-    :param nums:
-    :return:
+        LC1464
+        :param nums: входной список
+        :return: (max-1)(prev_max-1)
     """
     max = nums[0]
     prev_max = 0
