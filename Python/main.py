@@ -1262,6 +1262,11 @@ def largest_odd_number(num) -> str:
     return ""
 
 def max_product(nums) -> int:
+    """
+    LC1464
+    :param nums:
+    :return:
+    """
     max = nums[0]
     prev_max = 0
     for i in range(1, len(nums)):
