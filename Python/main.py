@@ -1280,7 +1280,7 @@ def max_product(nums) -> int:
 
     return (max - 1) * (prev_max - 1)
 
-def numSpecial(mat) -> int:
+def num_special(mat) -> int:
     """
         Находит одинокие по горизонтали и вертикали "1"
         LC1582
