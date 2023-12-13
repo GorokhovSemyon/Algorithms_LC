@@ -1281,6 +1281,11 @@ def max_product(nums) -> int:
     return (max - 1) * (prev_max - 1)
 
 def numSpecial(mat) -> int:
+    """
+    LC1582
+    :param mat:
+    :return:
+    """
     cnt = 0
     for i in range(len(mat)):
         for j in range(len(mat[0])):
