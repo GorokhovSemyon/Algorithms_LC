@@ -571,22 +571,22 @@ def winner_of_game_improved(colors: str) -> bool:
         Улучшенная версия без использования доп памяти
     """
     alice_plays, bob_plays = 0, 0
-    count = 1
+    cnt = 1
 
     for i in range(1, len(colors)):
         if colors[i] == colors[i - 1]:
-            count += 1
+            cnt += 1
         else:
             if colors[i - 1] == 'A':
-                alice_plays += max(0, count - 2)
+                alice_plays += max(0, cnt - 2)
             else:
-                bob_plays += max(0, count - 2)
-            count = 1
+                bob_plays += max(0, cnt - 2)
+            cnt = 1
 
     if colors[-1] == 'A':
-        alice_plays += max(0, count - 2)
+        alice_plays += max(0, cnt - 2)
     else:
-        bob_plays += max(0, count - 2)
+        bob_plays += max(0, cnt - 2)
 
     return alice_plays > bob_plays
 
@@ -613,15 +613,15 @@ def majority_element(nums):
         Вывести числа, которые встречаются более n/3 раз в массиве
     """
     from collections import Counter
-    num_counts = Counter(nums)
+    num_cnts = Counter(nums)
 
     # Создаем пустой список для хранения результатов
     result = []
 
-    # Проходимся по парам (число, количество) в словаре num_counts
-    for num, count in num_counts.items():
+    # Проходимся по парам (число, количество) в словаре num_cnts
+    for num, cnt in num_cnts.items():
         # Проверяем условие
-        if count > len(nums) // 3:
+        if cnt > len(nums) // 3:
             result.append(num)
 
     return result
@@ -1082,7 +1082,7 @@ def kth_grammar(n, k):
     return 0 if are_val_same else 1
 
 
-def count_vowel_permutation(n: int) -> int:
+def cnt_vowel_permutation(n: int) -> int:
     """
         Подсчёт комбинаций с предусловиями
         LC1220
@@ -1133,7 +1133,7 @@ def sort_by_bits(arr):
     """
 
     def binary_sort_key(num):
-        cnt_of_positive_bits = bin(num).count('1')
+        cnt_of_positive_bits = bin(num).cnt('1')
         return (cnt_of_positive_bits, num)
 
     arr.sort(key=binary_sort_key)
@@ -1173,19 +1173,19 @@ def is_reachable_at_time(sx, sy, fx, fy, t) -> bool:
     return (min(xDiff, yDiff) + abs(xDiff - yDiff)) <= t
 
 
-def count_palindromic_subsequence(s: str) -> int:
+def cnt_palindromic_subsequence(s: str) -> int:
     """
         Находит все возможные палиндромы длины 3
         LC1930
         :param s: входная строка
         :return: количество возможных палиндромов
     """
-    count = 0
+    cnt = 0
     for i in range(26):
         l, r = s.find(chr(i + 97)), s.rfind(chr(i + 97))
         if l != -1 and r != -1:
-            count += len(set(s[l + 1:r]))
-    return count
+            cnt += len(set(s[l + 1:r]))
+    return cnt
 
 
 def find_diagonal_order(input_list):
@@ -1279,6 +1279,14 @@ def max_product(nums) -> int:
                 prev_max = nums[i]
 
     return (max - 1) * (prev_max - 1)
+
+def numSpecial(mat) -> int:
+    cnt = 0
+    for i in range(len(mat)):
+        for j in range(len(mat[0])):
+            if mat[i][j] == 1 and sum(mat[i]) == 1 and sum(row[j] for row in mat) == 1:
+                cnt += 1
+    return cnt
 
 
 if __name__ == '__main__':
