@@ -1280,12 +1280,12 @@ def max_product(nums) -> int:
 
     return (max - 1) * (prev_max - 1)
 
-def num_special(mat) -> int:
+def num_special(mat):
     """
         Находит одинокие по горизонтали и вертикали "1"
         LC1582
         :param mat: входная матрица
-        :return: количество "специальных" единиц
+        :return: количество "специальных" единиц [int]
     """
     cnt = 0
     for i in range(len(mat)):
