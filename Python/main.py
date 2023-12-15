@@ -1298,8 +1298,8 @@ def dest_city(paths) -> str:
     """
         Найти конечный путь во входном списке пар [начальный пункт, конечный пункт]
         LC1436
-        :param paths:
-        :return:
+        :param paths: список пар [начальный пункт[str], конечный пункт[str]]
+        :return: конечный пункт
     """
     res_dict = {}
     for elem in paths:
