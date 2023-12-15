@@ -1294,6 +1294,24 @@ def num_special(mat):
                 cnt += 1
     return cnt
 
+def destCity(paths) -> str:
+    res_dict = {}
+    for elem in paths:
+        if elem[0] not in res_dict:
+            res_dict[elem[0]] = 1
+        else:
+            res_dict[elem[0]] += 1
+        if elem[1] not in res_dict:
+            res_dict[elem[1]] = 3
+        else:
+            res_dict[elem[1]] += 1
+
+    for key, value in reversed(res_dict.items()):
+        if value == 3:
+            return key
+
+    return ""
+
 
 if __name__ == '__main__':
     # Для group_anagram()
