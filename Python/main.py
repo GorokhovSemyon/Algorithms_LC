@@ -1294,7 +1294,12 @@ def num_special(mat):
                 cnt += 1
     return cnt
 
-def destCity(paths) -> str:
+def dest_city(paths) -> str:
+    """
+
+    :param paths:
+    :return:
+    """
     res_dict = {}
     for elem in paths:
         if elem[0] not in res_dict:
