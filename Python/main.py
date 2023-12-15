@@ -1296,9 +1296,10 @@ def num_special(mat):
 
 def dest_city(paths) -> str:
     """
-
-    :param paths:
-    :return:
+        Найти конечный путь во входном списке пар [начальный пункт, конечный пункт]
+        LC1436
+        :param paths:
+        :return:
     """
     res_dict = {}
     for elem in paths:
