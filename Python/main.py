@@ -1318,12 +1318,12 @@ def dest_city(paths) -> str:
 
     return ""
 
-def maxProductDifference(nums):
+def max_product_difference(nums):
     """
         Найти наибольшую разницу между произведениями
         LC1913
-        :param nums:
-        :return:
+        :param nums: входной список [int]
+        :return: результат разницы
     """
     largest, secondLargest = 0, 0
     smallest, secondSmallest = float('inf'), float('inf')
