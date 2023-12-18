@@ -1318,6 +1318,30 @@ def dest_city(paths) -> str:
 
     return ""
 
+def maxProductDifference(nums):
+    """
+
+    :param nums:
+    :return:
+    """
+    largest, secondLargest = 0, 0
+    smallest, secondSmallest = float('inf'), float('inf')
+
+    for num in nums:
+        if num < smallest:
+            secondSmallest = smallest
+            smallest = num
+        elif num < secondSmallest:
+            secondSmallest = num
+
+        if num > largest:
+            secondLargest = largest
+            largest = num
+        elif num > secondLargest:
+            secondLargest = num
+
+    return (largest * secondLargest) - (smallest * secondSmallest)
+
 
 if __name__ == '__main__':
     # Для group_anagram()
