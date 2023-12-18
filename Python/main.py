@@ -1320,9 +1320,10 @@ def dest_city(paths) -> str:
 
 def maxProductDifference(nums):
     """
-
-    :param nums:
-    :return:
+        Найти наибольшую разницу между произведениями
+        LC1913
+        :param nums:
+        :return:
     """
     largest, secondLargest = 0, 0
     smallest, secondSmallest = float('inf'), float('inf')
