@@ -1343,7 +1343,13 @@ def max_product_difference(nums):
 
     return (largest * secondLargest) - (smallest * secondSmallest)
 
-def imageSmoother(img):
+def image_smoother(img):
+    """
+        Найти среднее между значением в текущей ячейке и соседними
+        LC661
+        :param nums: входной двумерный список
+        :return: двумерный список средних
+    """
     n = len(img)
     m = len(img[0])
     res = []
