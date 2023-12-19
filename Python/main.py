@@ -1343,6 +1343,43 @@ def max_product_difference(nums):
 
     return (largest * secondLargest) - (smallest * secondSmallest)
 
+def imageSmoother(img):
+    n = len(img)
+    m = len(img[0])
+    res = []
+    for i in range(n):
+        temp = []
+        for j in range(m):
+            count = 1
+            sum = img[i][j]
+            if i - 1 >= 0 and j - 1 >= 0:
+                sum += img[i - 1][j - 1]
+                count += 1
+            if j - 1 >= 0:
+                sum = sum + img[i][j - 1]
+                count += 1
+            if i + 1 <= n - 1 and j - 1 >= 0:
+                sum += img[i + 1][j - 1]
+                count += 1
+            if i + 1 <= n - 1:
+                sum += img[i + 1][j]
+                count += 1
+            if i + 1 <= n - 1 and j + 1 <= m - 1:
+                sum += img[i + 1][j + 1]
+                count += 1
+            if j + 1 <= m - 1:
+                sum += img[i][j + 1]
+                count += 1
+            if i - 1 >= 0 and j + 1 <= m - 1:
+                sum += img[i - 1][j + 1]
+                count += 1
+            if i - 1 >= 0:
+                sum += img[i - 1][j]
+                count += 1
+            temp.append(sum // count)
+        res.append(temp)
+    return res
+
 
 if __name__ == '__main__':
     # Для group_anagram()
