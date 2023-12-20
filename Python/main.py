@@ -1236,7 +1236,7 @@ def hamming_weight(n):
         pos_bit_cnt += 1
     return pos_bit_cnt
 
-def arrayStringsAreEqual(word1, word2) -> bool:
+def array_strings_are_equal(word1, word2) -> bool:
     """
         Сравнение двух списков по внутренним символам
         LC1662
