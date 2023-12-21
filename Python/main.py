@@ -1388,9 +1388,10 @@ def image_smoother(img):
 
 def max_widthOfVerticalArea(points) -> int:
     """
+        Нахождение наибольшей ширины между точками
         LC661
-        :param points:
-        :return:
+        :param points: входной список точек [List[List[int]]]
+        :return: наибольшая ширина
     """
     points.sort(key=lambda x: x[0])
 
