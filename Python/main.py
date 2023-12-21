@@ -1387,6 +1387,11 @@ def image_smoother(img):
     return res
 
 def max_widthOfVerticalArea(points) -> int:
+    """
+        LC661
+        :param points:
+        :return:
+    """
     points.sort(key=lambda x: x[0])
 
     max_width = 0
