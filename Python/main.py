@@ -1386,7 +1386,7 @@ def image_smoother(img):
         res.append(temp)
     return res
 
-def max_widthOfVerticalArea(points) -> int:
+def max_width_of_vertical_area(points) -> int:
     """
         Нахождение наибольшей ширины между точками
         LC661
