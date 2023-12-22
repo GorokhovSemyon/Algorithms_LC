@@ -1404,6 +1404,18 @@ def max_width_of_vertical_area(points) -> int:
     return max_width
 
 
+def max_score(s: str) -> int:
+    max_score, count_zeros_left = 0, 0
+    count_ones_right = s.count('1')
+
+    for i in range(len(s) - 1):
+        count_zeros_left += s[i] == '0'
+        count_ones_right -= s[i] == '1'
+        max_score = max(max_score, count_zeros_left + count_ones_right)
+
+    return max_score
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
