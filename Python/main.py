@@ -1405,6 +1405,12 @@ def max_width_of_vertical_area(points) -> int:
 
 
 def max_score(s: str) -> int:
+    """
+        Найти наибольшую сумму, считаемую по "0" и "1" при разделении строки на две
+        LC1422
+        :param s: Входная строка
+        :return: наибольшая сумма
+    """
     max_score, count_zeros_left = 0, 0
     count_ones_right = s.count('1')
 
