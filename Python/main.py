@@ -1417,7 +1417,7 @@ def max_score(s: str) -> int:
 
 
 class Solution(object):
-    def minOperations(self, s):
+    def min_operations(self, s):
         """
             Строка только с "0" и "1", нужно сделать так, чтобы радом не было
             одинаковых, посчитать минимальное количество замен для этого
