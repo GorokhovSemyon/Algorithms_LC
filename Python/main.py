@@ -1416,6 +1416,32 @@ def max_score(s: str) -> int:
     return max_score
 
 
+class Solution(object):
+    def minOperations(self, s):
+        """
+            Строка только с "0" и "1", нужно сделать так, чтобы радом не было
+            одинаковых, посчитать минимальное количество замен для этого
+            LC1758
+            :param s: входная строка [str]
+            :return: min количество операций
+        """
+        c_0 = s[0]
+        cnt1 = self.cnt(s, c_0)
+        cnt2 = self.cnt(s, '0' if c_0 == '1' else '1') + 1
+        return min(cnt1, cnt2)
+
+    def cnt(self, s, c_pre):
+        cnt = 0
+        for i in range(1, len(s)):
+            current = s[i]
+            if current == c_pre:
+                cnt += 1
+                c_pre = '0' if c_pre == '1' else '1'
+            else:
+                c_pre = current
+        return cnt
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
