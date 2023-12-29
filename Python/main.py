@@ -1447,8 +1447,7 @@ class Solution(object):
                 c_pre = current
         return cnt
 
-def plusOne(digits) -> list:
-
+def plus_one(digits) -> list:
     for i in range(len(digits) - 1, -1, -1):
         if digits[i] == 9:
             digits[i] = 0
