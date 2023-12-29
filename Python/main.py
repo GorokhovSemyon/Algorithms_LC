@@ -1448,6 +1448,12 @@ class Solution(object):
         return cnt
 
 def plus_one(digits) -> list:
+    """
+        Сложение с "1" decimal числа
+        LC66
+        :param digits: decimal число в виде списка
+        :return: decimal число digits + 1
+    """
     for i in range(len(digits) - 1, -1, -1):
         if digits[i] == 9:
             digits[i] = 0
