@@ -1464,6 +1464,9 @@ def plus_one(digits) -> list:
 
 
 def make_equal(words) -> bool:
+    """
+        LC1897
+    """
     n = len(words)
     f = [0] * 26
     for word in words:
