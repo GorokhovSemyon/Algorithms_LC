@@ -1463,7 +1463,7 @@ def plus_one(digits) -> list:
     return [1] + digits
 
 
-def makeEqual(words) -> bool:
+def make_equal(words) -> bool:
     n = len(words)
     f = [0] * 26
     for word in words:
