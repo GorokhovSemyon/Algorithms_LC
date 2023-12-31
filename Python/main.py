@@ -1466,6 +1466,8 @@ def plus_one(digits) -> list:
 def make_equal(words) -> bool:
     """
         LC1897
+        :param words: список слов
+        :return: возвращает булевый результат, можно ли сделать все слова одинаковыми
     """
     n = len(words)
     f = [0] * 26
