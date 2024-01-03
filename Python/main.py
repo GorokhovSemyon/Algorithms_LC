@@ -470,9 +470,9 @@ def remove_duplicate_letters(s) -> str:
 def decode_at_index(s: str, k: int) -> str:
     """
         Задача поиска символа в предварительно расшифрованной строке
-        :param s: входная строка
-        :param k: индекс
-        :return: найденный символ
+        :param s: входная строка [str]
+        :param k: индекс [int]
+        :return: найденный символ [char]
     """
     length = 0
     i = 0
