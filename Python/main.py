@@ -1486,7 +1486,7 @@ def make_equal(words) -> bool:
 
     return True
 
-def minOperations(nums) -> int:
+def min_operations(nums) -> int:
     from collections import Counter
     cntr = Counter(nums)
 
