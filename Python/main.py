@@ -1487,6 +1487,11 @@ def make_equal(words) -> bool:
     return True
 
 def min_operations(nums) -> int:
+    """
+        LC2870
+        :param:
+        :return: min количество операций
+    """
     from collections import Counter
     cntr = Counter(nums)
 
