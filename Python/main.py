@@ -1486,6 +1486,20 @@ def make_equal(words) -> bool:
 
     return True
 
+def minOperations(nums) -> int:
+    from collections import Counter
+    cntr = Counter(nums)
+
+    cnt = 0
+    for t in cntr.values():
+        if t == 1:
+            return -1
+        cnt += t // 3
+        if t % 3:
+            cnt += 1
+
+    return cnt
+
 
 if __name__ == '__main__':
     # Для group_anagram()
