@@ -1490,8 +1490,8 @@ def min_operations(nums) -> int:
     """
         Функция нахождения минимального количества операций, за которое можно очистить массив
         LC2870
-        :param nums: список входных значений
-        :return: min количество операций
+        :param nums: список входных значений [List[int]]
+        :return: min количество операций [int]
     """
     from collections import Counter
     cntr = Counter(nums)
