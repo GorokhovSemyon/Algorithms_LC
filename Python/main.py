@@ -168,7 +168,9 @@ def move_zeros(nums) -> None:
 
 
 def group_anagrams(strs) -> list:
-    """Нахождение перестановок из набора букв"""
+    """
+        Нахождение перестановок из набора букв
+    """
     from collections import defaultdict
     anagram_dict = defaultdict(list)
 
