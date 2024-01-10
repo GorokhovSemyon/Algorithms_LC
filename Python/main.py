@@ -19,7 +19,7 @@ def is_reflected(points) -> bool:
 def longest_subarray(nums) -> int:
     """
         Найти длиннейший подмассив из 1, после удаления одного 0/1
-        :param nums: входной список List[int]
+        :param nums: входной список [List[int]]
         :return: длина найденного подмассива [int]
     """
     n = len(nums)
