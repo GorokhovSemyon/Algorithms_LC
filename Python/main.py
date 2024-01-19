@@ -65,8 +65,8 @@ def summary_ranges(nums) -> str:
 def compress(chars) -> int:
     """
         Скомпрессовать строку аааа -> а4 и т.п.
-        :param chars: входная строка
-        :return: строка результата
+        :param chars: входная строка [str]
+        :return: строка результата [str]
     """
     ans = 0
     i = 0
