@@ -115,6 +115,8 @@ class ZigzagIterator:
 def is_palindrome(s) -> bool:
     """
         Приведение к строчным буквам и проверка на палиндром
+        :param s: входная строка [str]
+        :result: является ли палиндромом [bool]
     """
     s = [c.lower() for c in s if c.isalnum()]
     return all(s[i] == s[~i] for i in range(len(s) // 2))
