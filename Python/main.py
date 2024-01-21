@@ -141,6 +141,9 @@ def is_one_edit_distance(s, t):
 def subarray_sum(nums, k):
     """
         Находит количество подмассивов в текущем, которые в сумме - k
+        :param nums: входной массив чисел [List[int]]
+        :param k: необходимая сумма подмассивов [int]
+        :return res: количество подходящих массивов [int]
     """
 
     res = 0
