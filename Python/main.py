@@ -125,6 +125,7 @@ def is_palindrome(s) -> bool:
 def is_one_edit_distance(s, t):
     """
         Можно ли за одно изменение сделать строки равными
+        :return: Можно/нельзя [bool]
     """
     m, n = len(s), len(t)
     for i in range(min(m, n)):
