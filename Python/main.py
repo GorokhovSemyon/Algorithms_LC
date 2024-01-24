@@ -178,6 +178,8 @@ def move_zeros(nums) -> None:
 def group_anagrams(strs) -> list:
     """
         Нахождение перестановок из набора букв
+        :param strs: входные строки [str]
+        :return: список анограм [List[str]]
     """
     from collections import defaultdict
     anagram_dict = defaultdict(list)
