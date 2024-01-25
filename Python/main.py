@@ -406,6 +406,9 @@ def min_usb_cost(n, m, c2, c5):
 def is_subsequence(s: str, t: str) -> bool:
     """
         Есть ли набор символов из t в s
+        :param s: входная строка, внутри которой осуществляется поиск [str]
+        :param t: строка, символы которой ищутся в s [str]
+        :return: Есть/нет [bool]
     """
     i, j = 0, 0
     while i < len(s) and j < len(t):
