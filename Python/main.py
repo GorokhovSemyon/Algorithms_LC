@@ -166,6 +166,8 @@ def subarray_sum(nums, k):
 def move_zeros(nums) -> None:
     """
         Перемещение нулей к концу списка
+        :param nums: входной список
+        :return: None
     """
     i = 0
     for j in range(len(nums)):
