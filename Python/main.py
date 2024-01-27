@@ -215,7 +215,9 @@ class RandomizedSet:
         return True
 
     def remove(self, val: int) -> bool:
-        # Удаление элемента из RandomizedSet. Если элемент не существует, возвращаем False.
+        '''
+            Удаление элемента из RandomizedSet. Если элемент не существует, возвращаем False.
+        '''
         if val not in self.data_map:
             return False
 
