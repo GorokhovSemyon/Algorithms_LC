@@ -330,6 +330,8 @@ def check_inclusion(s1, s2):
     """
         Проверка есть ли в каком-то виде
         перестановка строки s2 в s1
+        :param s1: первая входная строка [str]
+        :param s2: вторая входная строка [str]
     """
     from collections import Counter
     cntr, w, match = Counter(s1), len(s1), 0
