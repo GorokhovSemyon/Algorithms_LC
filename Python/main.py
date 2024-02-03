@@ -574,9 +574,11 @@ def find132pattern(nums) -> bool:
     return False
 
 
-def reverse_words(s: str) -> str:
+def reverse_words(s) -> str:
     """
         Разворот всех слов в строке
+        :param s: входная строка [str]
+        :return: перевёрнутая вхожная строка [str]
     """
     return ' '.join(map(lambda word: word[::-1], s.split()))
 
