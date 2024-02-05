@@ -361,6 +361,7 @@ def merge_k_lists(lists) -> ListNode:
     """
         Слияние k сортированных массивов,
         которые находятся в связном списке
+        :param lists: связные списки
     """
     v = []
     for i in lists:
