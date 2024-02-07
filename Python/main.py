@@ -2,7 +2,7 @@ def is_reflected(points) -> bool:
     """
         Найти линию, паралельную y, которая отражает точки (O(n))
         :param points: входной массив, отражающий точки линии [List[int]]
-        :return: является ли отражённой [bool]
+        :return: является отражённой [bool]
     """
     min_x, max_x = float('inf'), float('-inf')
     point_set = set()
