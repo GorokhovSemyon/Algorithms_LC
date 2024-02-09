@@ -166,7 +166,7 @@ def subarray_sum(nums, k):
 def move_zeros(nums) -> None:
     """
         Перемещение нулей к концу списка
-        :param nums: входной список
+        :param nums: входной список [List[int]]
         :return: None
     """
     i = 0
