@@ -1515,6 +1515,7 @@ def make_equal(words) -> bool:
 
     return True
 
+
 def min_operations(nums) -> int:
     """
         Функция нахождения минимального количества операций, за которое можно очистить массив
@@ -1557,6 +1558,24 @@ def minSteps(s: str, t: str) -> int:
         steps += abs(count_s[i] - count_t[i])
 
     return steps // 2
+
+
+def majorityElement(nums):
+    """
+        Найти число, которое появляется чаще всего во входном списке
+        LC169
+        :param nums: входной список [List[int]]
+        :result: чаще всего появляющееся число [int]
+    """
+    dict = {}
+
+    for n in nums:
+        if n not in dict:
+            dict[n] = 1
+        else:
+            dict[n] += 1
+
+    return max(dict, key=dict.get) 
 
 
 if __name__ == '__main__':
