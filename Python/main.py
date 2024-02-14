@@ -563,6 +563,7 @@ def is_monotonic(nums) -> bool:
 def find132pattern(nums) -> bool:
     """
         Решение задачи с паттерном 132
+        :param nums: входной список [List[int]]
     """
     stack, last = [], float('-inf')
 
