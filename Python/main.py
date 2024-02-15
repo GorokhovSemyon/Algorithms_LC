@@ -708,6 +708,9 @@ def search_range(nums, target):
     """
 
     def binary_search(nums, target, left) -> list:
+        """
+            :param nums: входной список [List[int]]
+        """
         low, high = 0, len(nums) - 1
         index = -1
         while low <= high:
