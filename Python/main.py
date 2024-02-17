@@ -438,7 +438,8 @@ def longest_str_chain(words):
 
 def champagne_tower(poured: int, query_row: int, query_glass: int) -> float:
     """
-        Задача про пирамиду из бокалов (LC799)
+        Задача про пирамиду из бокалов
+        LC799
     """
     tower = [[0] * (i + 1) for i in range(query_row + 1)]
     tower[0][0] = poured
