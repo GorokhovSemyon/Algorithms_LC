@@ -740,6 +740,8 @@ def min_operations(nums) -> int:
         для того, чтобы выполнить условия:
         - элементы массива уникальны
         - max(nums) - min(nums) == len(nums) - 1
+        :param nums: входной список чисиел [List[int]]
+        :return: минимальное количество операций [int]
     """
     from bisect import bisect_right
     from sys import maxsize
