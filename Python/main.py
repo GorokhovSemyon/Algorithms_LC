@@ -1582,7 +1582,18 @@ def majorityElement(nums):
         else:
             dict[n] += 1
 
-    return max(dict, key=dict.get) 
+    return max(dict, key=dict.get)
+
+
+def isPowerOfTwo(n) -> bool:
+    """
+        Проверить, что 2 в степени x равно n
+        LC231 
+        :param n: входное число [int]
+        :return: Да/Нет [bool]
+    """ 
+    if n <= 0: return False
+    return pow(2, int(log(n, 2))) == n
 
 
 if __name__ == '__main__':
