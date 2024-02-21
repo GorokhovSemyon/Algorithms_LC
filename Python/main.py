@@ -666,7 +666,7 @@ def majority_element(nums):
 def integer_break(n: int) -> int:
     """
         Находит наибольшее произведение из разложения на слагаемые
-        :param n: входное число
+        :param n: входное число [int]
     """
     if n == 2:
         return 1
