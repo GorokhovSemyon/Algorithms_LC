@@ -456,7 +456,11 @@ def champagne_tower(poured: int, query_row: int, query_glass: int) -> float:
 
 def find_the_difference(s: str, t: str) -> str:
     """
-        Найти отличающийся элемента (LC389) XOR
+        Найти отличающийся элемента XOR
+        LC389
+        :param s: первая строка [str]
+        :param t: вторая строка [str]
+        :return: символ, который отличается [chr]
     """
     result = 0
     for char in s + t:
