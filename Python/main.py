@@ -311,9 +311,10 @@ def list_to_LL(arr):
     return ListNode(arr[0], next=list_to_LL(arr[1:]))
 
 
-def reverse_linked_list(head: ListNode):
+def reverse_linked_list(head):
     """
         Разворот односвязного списка O(n)
+        :param head: голова связного списка [ListNode]
     """
     new_list = None
 
