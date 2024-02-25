@@ -428,7 +428,8 @@ def is_subsequence(s: str, t: str) -> bool:
 
 def longest_str_chain(words):
     """
-        Поиск самой длинной цепочки (LC1048)
+        Поиск самой длинной цепочки
+        LC1048
         :param words: список слов [List[str]]
     """
     dp = {}
