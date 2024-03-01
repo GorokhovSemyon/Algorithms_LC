@@ -693,6 +693,8 @@ def integer_break(n: int) -> int:
 def max_dot_product(nums1, nums2) -> int:
     """
         Максимальное скалярное произведение
+        :param num1: первое число [int]
+        :param num2: второе число [int]
     """
     n = len(nums1)
     m = len(nums2)
