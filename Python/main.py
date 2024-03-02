@@ -1607,6 +1607,14 @@ def isPowerOfTwo(n) -> bool:
     return pow(2, int(log(n, 2))) == n
 
 
+def sortedSquares(self, nums: List[int]) -> List[int]:
+    """
+        Возвращение массива с квадратами исходного
+        LC977
+    """
+    return sorted([(elem * elem) for elem in nums])
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
