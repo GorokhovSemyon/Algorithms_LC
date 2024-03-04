@@ -636,7 +636,7 @@ def winner_of_game_improved(colors: str) -> bool:
 
 def numIdentical_pairs(nums) -> int:
     """
-        Найти все хорошие пары (nums[i] == nums[j] and i < j)
+        Найти все хорошие пары (те, для которых nums[i] == nums[j] and i < j)
     """
     res_dict = {}
     cnt = 0
