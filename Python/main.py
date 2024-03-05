@@ -439,10 +439,11 @@ def longest_str_chain(words):
     return max(dp.values())
 
 
-def champagne_tower(poured: int, query_row: int, query_glass: int) -> float:
+def champagne_tower(poured, query_row: int, query_glass: int) -> float:
     """
         Задача про пирамиду из бокалов
         LC799
+        :param poured: наполненные бокалы [int]
     """
     tower = [[0] * (i + 1) for i in range(query_row + 1)]
     tower[0][0] = poured
