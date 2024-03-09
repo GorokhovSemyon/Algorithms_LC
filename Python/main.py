@@ -251,7 +251,9 @@ class Node:
 
 
 class LRUCache:
-    """Реализация LRU"""
+    """
+        Реализация LRU
+    """
 
     def __init__(self, capacity: int):
         self.net = capacity
