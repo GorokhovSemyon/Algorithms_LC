@@ -658,6 +658,7 @@ def majority_element(nums):
     """
         Вывести числа, которые встречаются более n/3 раз в массиве
         :param nums: входной список чисел [List[int]]
+        :result: список чисел [List[int]]
     """
     from collections import Counter
     num_cnts = Counter(nums)
