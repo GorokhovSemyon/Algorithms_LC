@@ -921,7 +921,7 @@ def constrained_subset_sum(nums, k) -> int:
     """
         Вернуть максимальную сумму подсписка длиной не менее k
         LC1425
-        :param nums:
+        :param nums: входной список [List[int]]
         :param k:
         :return: максимальная сумма
     """
