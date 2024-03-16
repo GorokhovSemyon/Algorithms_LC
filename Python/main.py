@@ -615,6 +615,7 @@ def winner_of_game(colors: str) -> bool:
 def winner_of_game_improved(colors: str) -> bool:
     """
         Улучшенная версия без использования доп памяти
+        :param colors: входная строка [str]
     """
     alice_plays, bob_plays = 0, 0
     cnt = 1
