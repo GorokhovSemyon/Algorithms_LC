@@ -1509,8 +1509,8 @@ def plus_one(digits) -> list:
     """
         Сложение с "1" decimal числа
         LC66
-        :param digits: decimal число в виде списка
-        :return: decimal число digits + 1
+        :param digits: decimal число в виде списка [List[int]]
+        :return: decimal число digits + 1 [List[int]]
     """
     for i in range(len(digits) - 1, -1, -1):
         if digits[i] == 9:
