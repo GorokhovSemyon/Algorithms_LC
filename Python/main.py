@@ -795,7 +795,7 @@ def find_in_mountain_array(target, mountain_arr) -> int:
     """
         Задача поиска target элемента в массиве, отражающем высоты
         :param target: цель
-        :param mountain_arr: список вершин
+        :param mountain_arr: список вершин [List[int]]
         :return: индекс целевой высоты
     """
 
