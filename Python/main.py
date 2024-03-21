@@ -1144,7 +1144,7 @@ def cnt_vowel_permutation(n: int) -> int:
     """
         Подсчёт комбинаций с предусловиями
         LC1220
-        :param n: длина строки
+        :param n: длина строки [int]
         :return: количество комбинаций
     """
     MOD = 10 ** 9 + 7
