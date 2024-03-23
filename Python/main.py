@@ -924,7 +924,7 @@ def constrained_subset_sum(nums, k) -> int:
         Вернуть максимальную сумму подсписка длиной не менее k
         LC1425
         :param nums: входной список [List[int]]
-        :param k: длина подсписка
+        :param k: длина подсписка [int]
         :return: максимальная сумма
     """
     from collections import deque
