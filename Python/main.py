@@ -1621,6 +1621,19 @@ def sortedSquares(self, nums: List[int]) -> List[int]:
     return sorted([(elem * elem) for elem in nums])
 
 
+def firstMissingPositive(self, nums: List[int]) -> int:
+    """
+    LC41
+    """
+    tmp = set(x for x in nums if x > 0)
+    current = 1
+
+    while current in tmp:
+        current += 1
+
+    return current
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
