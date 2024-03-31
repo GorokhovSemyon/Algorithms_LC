@@ -252,7 +252,7 @@ class Node:
 
 class LRUCache:
     """
-        Реализация LRU
+        Реализация LRU Cache
     """
 
     def __init__(self, capacity: int):
