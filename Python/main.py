@@ -1324,7 +1324,7 @@ def max_product(nums) -> int:
         Нахождение максимума и пред максимума
         LC1464
         :param nums: входной список [List[int]]
-        :return: (max-1)(prev_max-1)
+        :return: (max-1)(prev_max-1) [int]
     """
     max = nums[0]
     prev_max = 0
