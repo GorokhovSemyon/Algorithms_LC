@@ -1634,6 +1634,16 @@ def firstMissingPositive(self, nums: List[int]) -> int:
     return current
 
 
+def isIsomorphic(s, t):
+        """
+        :param s: первая строка
+        :param t: вторая строка
+        :return: можно ли заменить символы в первой, чтобы получить вторую (однозначно) 
+        """
+
+        return len(set(zip(s,t))) == len(set(s)) == len(set(t))
+
+
 if __name__ == '__main__':
     # Для group_anagram()
     # input_strs = input().split(',')
