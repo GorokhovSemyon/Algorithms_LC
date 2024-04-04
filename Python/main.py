@@ -599,6 +599,7 @@ def reverse_words(s) -> str:
 def winner_of_game(colors: str) -> bool:
     """
         Выявление победителя в игре
+        :param str: входная строка [str]
     """
     from collections import Counter
     from itertools import groupby
