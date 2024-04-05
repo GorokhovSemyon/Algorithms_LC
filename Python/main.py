@@ -1635,6 +1635,21 @@ def firstMissingPositive(self, nums: List[int]) -> int:
     return current
 
 
+def makeGood(s: str) -> str:
+    """
+    LC1544
+    """
+    stack = []
+
+    for i in range(len(s)):
+        if stack and abs(ord(s[i]) - ord(stack[-1])) == 32:
+            stack.pop()
+        else:
+            stack.append(s[i])
+
+    return ''.join(stack)
+
+
 def isIsomorphic(s, t):
         """
         :param s: первая строка
