@@ -873,7 +873,7 @@ def backspace_сompare(s: str, t: str) -> bool:
     """
         Решение задачи сравнения строк, если внутри
         них # == backspace
-        :param s: входная строка
+        :param s: входная строка [str]
         :param t: строчка для сравнения
         :return: bool
     """
