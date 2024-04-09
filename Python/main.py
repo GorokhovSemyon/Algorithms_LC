@@ -967,7 +967,7 @@ def str_str(haystack: str, needle: str) -> int:
     LC29
     :param haystack:
     :param needle:
-    :return: -1 / индекс первого вхождения
+    :return: -1 / индекс первого вхождения [int]
     """
     if len(needle) > len(haystack):
         return -1
