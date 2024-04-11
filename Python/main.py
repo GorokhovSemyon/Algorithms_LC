@@ -1061,7 +1061,7 @@ def largest_values(root) -> list:
         на уровне бинарного дерева с deq
         LC515 v2.0
         :param root: корень дерева
-        :return: список максимумов
+        :return: список максимумов [List[int]]
     """
     from collections import deque
     if not root:
