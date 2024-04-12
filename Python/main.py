@@ -875,7 +875,7 @@ def backspace_сompare(s: str, t: str) -> bool:
         них # == backspace
         :param s: входная строка [str]
         :param t: строчка для сравнения
-        :return: bool
+        :return: True/False [bool]
     """
     i = len(s) - 1  # Идём от конца строки
     j = len(t) - 1
