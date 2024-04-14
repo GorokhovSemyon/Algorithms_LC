@@ -1659,6 +1659,31 @@ def isIsomorphic(s, t):
 
         return len(set(zip(s,t))) == len(set(s)) == len(set(t))
 
+def sumOfLeftLeaves(self, root) -> int:
+    """
+        LC404
+        :param root: class TreeNode:
+                        def __init__(self, val=0, left=None, right=None):
+                        self.val = val
+                        self.left = left
+                        self.right = right
+        :return: сумма всех левых листьев бинарного дерева [int]
+    """
+    if not root:
+        return 0
+
+    sum = 0
+
+    if root.left:
+        if not root.left.left and not root.left.right:
+            sum += root.left.val
+        else:
+            sum += self.sumOfLeftLeaves(root.left)
+    if root.right:
+        sum += self.sumOfLeftLeaves(root.right)
+
+    return sum
+
 
 if __name__ == '__main__':
     # Для group_anagram()
