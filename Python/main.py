@@ -942,24 +942,6 @@ def constrained_subset_sum(nums, k) -> int:
     return max(nums)
 
 
-def remove_element(nums, val: int):
-    """
-        Найти количество элементов списка, отличных от val
-        LC27
-        :param nums:
-        :param val:
-        :return: Количество отличных от val
-    """
-    j = 0
-
-    for i in range(len(nums)):
-        if nums[i] != val:
-            nums[j] = nums[i]
-            j += 1
-
-    return j
-
-
 def str_str(haystack: str, needle: str) -> int:
     """
     Проверяет есть ли подстрока в строке, если есть,
