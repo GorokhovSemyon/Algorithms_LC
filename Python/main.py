@@ -1153,7 +1153,7 @@ def poor_pigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
         :param buckets: количество вёдер
         :param minutesToDie: время на тест...
         :param minutesToTest: Время для определения
-        :return: количество требуемых свинок
+        :return: количество требуемых свинок [int]
     """
     ratio = minutesToTest / minutesToDie + 1
 
