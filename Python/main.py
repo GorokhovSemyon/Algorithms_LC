@@ -16,6 +16,38 @@ def is_reflected(points) -> bool:
     return all((s - x, y) in point_set for x, y in points)
 
 
+def numIslands(grid) -> int:
+    """
+        Найти количество островов, обьозначаемых в grid как "1"
+        LC200
+        :param grid: сетка отображающая область [List[List[int]]]
+        :return: количество островов [int]
+    """
+    if not grid:
+        return 0
+
+    rows = len(grid)
+    cols = len(grid[0])
+    isl_cnt = 0
+
+    def dfs_to_rem_isl(row, col):
+        if row < 0 or col < 0 or row == rows or col == cols or grid[row][col] != '1':
+            return
+        grid[row][col] = '0'
+        dfs_to_rem_isl(row - 1, col)
+        dfs_to_rem_isl(row + 1, col)
+        dfs_to_rem_isl(row, col - 1)
+        dfs_to_rem_isl(row, col + 1)
+
+    for row in range(rows):
+        for col in range(cols):
+            if grid[row][col] == '1':
+                dfs_to_rem_isl(row, col)
+                isl_cnt += 1
+
+    return isl_cnt
+
+
 def longest_subarray(nums) -> int:
     """
         Найти длиннейший подмассив из 1, после удаления одного 0/1
