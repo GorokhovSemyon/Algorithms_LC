@@ -827,7 +827,7 @@ def full_bloom_flowers(flowers, people) -> list:
 def find_in_mountain_array(target, mountain_arr) -> int:
     """
         Задача поиска target элемента в массиве, отражающем высоты
-        :param target: цель
+        :param target: цель [int]
         :param mountain_arr: список вершин [List[int]]
         :return: индекс целевой высоты [int]
     """
