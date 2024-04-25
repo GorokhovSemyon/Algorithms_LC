@@ -1182,7 +1182,7 @@ def poor_pigs(buckets: int, minutesToDie: int, minutesToTest: int) -> int:
     """
         Определить отравленное ведро
         LC458
-        :param buckets: количество вёдер
+        :param buckets: количество вёдер [int]
         :param minutesToDie: время на тест...
         :param minutesToTest: Время для определения
         :return: количество требуемых свинок [int]
