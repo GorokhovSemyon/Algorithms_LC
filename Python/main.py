@@ -1395,7 +1395,7 @@ def max_product_difference(nums):
     """
         Найти наибольшую разницу между произведениями
         LC1913
-        :param nums: входной список List[int]
+        :param nums: входной список [List[int]]
         :return: наибольшая разница [int]
     """
     largest, secondLargest = 0, 0
