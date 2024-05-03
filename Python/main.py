@@ -872,7 +872,7 @@ def min_cost_climbing_stairs(cost) -> int:
         Мин стоимость достижения вершины
         :param cost: список стоимостей перемещения на 1 или 2 ступеньки с i-й
         prev1, prev2 - мин стоимость достижения предыдущих ступенек [int]
-        :return: мин стоимость
+        :return: мин стоимость [int]
     """
     n = len(cost)
     prev1, prev2 = 0, 0
