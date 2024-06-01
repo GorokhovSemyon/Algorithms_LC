@@ -12,7 +12,7 @@ def is_reflected(points) -> bool:
         point_set.add((x, y))
     s = min_x + max_x
     # для каждой пары (x, y) создаётся кортеж (s-x, y)
-    # далее проверяется есть ли уже такая пара множества
+    # далее проверяется, есть ли уже такая пара множества
     return all((s - x, y) in point_set for x, y in points)
 
 
