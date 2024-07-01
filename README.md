@@ -8,4 +8,4 @@
 - validParentheses
 - longestCommonPrefix
 
-And much more
+And more
