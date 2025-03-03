@@ -7,5 +7,4 @@
 - romanToInteger
 - validParentheses
 - longestCommonPrefix
-
-And more
+- ...
