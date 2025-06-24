@@ -1357,7 +1357,7 @@ def num_special(mat):
     """
         Находит одинокие по горизонтали и вертикали "1"
         LC1582
-        :param mat: матрица 2х2 [List[List[int]]]
+        :param mat: матрица nxm [List[List[int]]]
         :return: количество "специальных" единиц [int]
     """
     cnt = 0
